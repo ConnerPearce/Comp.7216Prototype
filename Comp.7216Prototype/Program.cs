@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Comp._7216Prototype.CreateLimit;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace Comp._7216Prototype
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new Limit());
         }
     }
 }

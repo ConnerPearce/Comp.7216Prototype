@@ -8,13 +8,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Comp._7216Prototype
+namespace Comp._7216Prototype.Limit_Page
 {
-    public partial class Form1 : Form
+    public partial class RemoveLimit : Form
     {
-        public Form1()
+        public RemoveLimit()
         {
             InitializeComponent();
+
+        }
+
+        private void btnRemoveLimit_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

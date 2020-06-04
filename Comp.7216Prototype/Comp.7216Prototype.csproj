@@ -46,14 +46,35 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="Limit Page\Limit.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="Limit Page\Limit.Designer.cs">
+      <DependentUpon>Limit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Limit Page\LimitHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Limit Page\LimitHome.Designer.cs">
+      <DependentUpon>LimitHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Limit Page\RemoveLimit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Limit Page\RemoveLimit.Designer.cs">
+      <DependentUpon>RemoveLimit.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Limit Page\Limit.resx">
+      <DependentUpon>Limit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Limit Page\LimitHome.resx">
+      <DependentUpon>LimitHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Limit Page\RemoveLimit.resx">
+      <DependentUpon>RemoveLimit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -76,5 +97,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
