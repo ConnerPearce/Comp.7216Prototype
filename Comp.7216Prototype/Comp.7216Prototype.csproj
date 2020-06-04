@@ -64,6 +64,12 @@
     <Compile Include="Limit Page\RemoveLimit.Designer.cs">
       <DependentUpon>RemoveLimit.cs</DependentUpon>
     </Compile>
+    <Compile Include="Payee Page\PayeeHome.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payee Page\PayeeHome.Designer.cs">
+      <DependentUpon>PayeeHome.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Limit Page\Limit.resx">
@@ -74,6 +80,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Limit Page\RemoveLimit.resx">
       <DependentUpon>RemoveLimit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payee Page\PayeeHome.resx">
+      <DependentUpon>PayeeHome.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
