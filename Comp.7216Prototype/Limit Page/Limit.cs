@@ -25,8 +25,8 @@ namespace Comp._7216Prototype.CreateLimit
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            LimitHome home = new LimitHome();
-            home.Show();
+            RemoveLimit remove = new RemoveLimit();
+            remove.Show();
             Hide();
         }
     }
