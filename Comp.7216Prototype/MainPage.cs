@@ -9,24 +9,19 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Comp._7216Prototype.CreateLimit
+namespace Comp._7216Prototype
 {
-    public partial class Limit : Form
+    public partial class MainPage : Form
     {
-        public Limit()
+        public MainPage()
         {
             InitializeComponent();
         }
 
-        private void btnCreateLimit_Click(object sender, EventArgs e)
+        private void btnCredit_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void btnBack_Click(object sender, EventArgs e)
-        {
-            LimitHome home = new LimitHome();
-            home.Show();
+            LimitHome limitHome = new LimitHome();
+            limitHome.Show();
             Hide();
         }
     }
