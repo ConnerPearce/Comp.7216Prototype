@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Comp._7216Prototype.Limit_Page
+namespace Comp._7216Prototype.Payee_Page
 {
-    public partial class UpdateLimit : Form
+    public partial class PayeeHome : Form
     {
-        public UpdateLimit()
+        public PayeeHome()
         {
             InitializeComponent();
+        }
+
+        private void btnCreatePayee_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

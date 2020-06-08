@@ -1,4 +1,5 @@
 ﻿using Comp._7216Prototype.Limit_Page;
+using Comp._7216Prototype.Payee_Page;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -11,9 +12,9 @@ using System.Windows.Forms;
 
 namespace Comp._7216Prototype
 {
-    public partial class MainPage : Form
+    public partial class HomeNavigation : Form
     {
-        public MainPage()
+        public HomeNavigation()
         {
             InitializeComponent();
         }
@@ -22,6 +23,13 @@ namespace Comp._7216Prototype
         {
             LimitHome limitHome = new LimitHome();
             limitHome.Show();
+            Hide();
+        }
+
+        private void btnPayee_Click(object sender, EventArgs e)
+        {
+            PayeeHome payeeHome = new PayeeHome();
+            payeeHome.Show();
             Hide();
         }
     }

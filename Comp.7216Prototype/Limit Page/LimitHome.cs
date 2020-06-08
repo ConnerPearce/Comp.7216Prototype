@@ -34,16 +34,16 @@ namespace Comp._7216Prototype.Limit_Page
 
         private void btnUpdate_Click(object sender, EventArgs e)
         {
-            UpdateLimit updateLimit = new UpdateLimit();
-            updateLimit.Show();
-            Hide();
+            //UpdateLimit updateLimit = new UpdateLimit();
+            //updateLimit.Show();
+            //Hide();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            MainPage mainPage = new MainPage();
-            mainPage.Show();
-            Hide();
+            //MainPage mainPage = new MainPage();
+            //mainPage.Show();
+            //Hide();
         }
     }
 }
