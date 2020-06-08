@@ -79,6 +79,7 @@
             this.btnUpdateLimit.TabIndex = 6;
             this.btnUpdateLimit.Text = "Update Limit";
             this.btnUpdateLimit.UseVisualStyleBackColor = true;
+            this.btnUpdateLimit.Click += new System.EventHandler(this.btnUpdateLimit_Click);
             // 
             // UpdateLimit
             // 
