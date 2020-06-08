@@ -33,6 +33,7 @@
             this.btnRequestPayee = new System.Windows.Forms.Button();
             this.btnDeletePayee = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
+            this.btnBack = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCreatePayee
@@ -53,6 +54,7 @@
             this.btnUpdatePayee.TabIndex = 1;
             this.btnUpdatePayee.Text = "Update Payee";
             this.btnUpdatePayee.UseVisualStyleBackColor = true;
+            this.btnUpdatePayee.Click += new System.EventHandler(this.btnUpdatePayee_Click);
             // 
             // btnRequestPayee
             // 
@@ -62,6 +64,7 @@
             this.btnRequestPayee.TabIndex = 2;
             this.btnRequestPayee.Text = "Request Payee";
             this.btnRequestPayee.UseVisualStyleBackColor = true;
+            this.btnRequestPayee.Click += new System.EventHandler(this.btnRequestPayee_Click);
             // 
             // btnDeletePayee
             // 
@@ -71,6 +74,7 @@
             this.btnDeletePayee.TabIndex = 3;
             this.btnDeletePayee.Text = "Delete Payee";
             this.btnDeletePayee.UseVisualStyleBackColor = true;
+            this.btnDeletePayee.Click += new System.EventHandler(this.btnDeletePayee_Click);
             // 
             // lblTitle
             // 
@@ -82,11 +86,22 @@
             this.lblTitle.TabIndex = 4;
             this.lblTitle.Text = "Payee Home";
             // 
+            // btnBack
+            // 
+            this.btnBack.Location = new System.Drawing.Point(12, 12);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(75, 23);
+            this.btnBack.TabIndex = 5;
+            this.btnBack.Text = "Back";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
             // PayeeHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(338, 450);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnDeletePayee);
             this.Controls.Add(this.btnRequestPayee);
@@ -106,5 +121,6 @@
         private System.Windows.Forms.Button btnRequestPayee;
         private System.Windows.Forms.Button btnDeletePayee;
         private System.Windows.Forms.Label lblTitle;
+        private System.Windows.Forms.Button btnBack;
     }
 }
