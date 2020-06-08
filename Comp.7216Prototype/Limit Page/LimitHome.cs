@@ -32,18 +32,18 @@ namespace Comp._7216Prototype.Limit_Page
             Hide();
         }
 
-        private void btnUpdate_Click(object sender, EventArgs e)
+        private void btnBack_Click_1(object sender, EventArgs e)
         {
-            //UpdateLimit updateLimit = new UpdateLimit();
-            //updateLimit.Show();
-            //Hide();
+            HomeNavigation homeNavigation = new HomeNavigation();
+            homeNavigation.Show();
+            Hide();
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void btnUpdate_Click(object sender, EventArgs e)
         {
-            //MainPage mainPage = new MainPage();
-            //mainPage.Show();
-            //Hide();
+            UpdateLimit updateLimit = new UpdateLimit();
+            updateLimit.Show();
+            Hide();
         }
     }
 }

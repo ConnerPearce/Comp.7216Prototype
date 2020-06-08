@@ -8,20 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Comp._7216Prototype.Limit_Page
+namespace Comp._7216Prototype.Transaction
 {
-    public partial class UpdateLimit : Form
+    public partial class Transaction : Form
     {
-        public UpdateLimit()
+        public Transaction()
         {
             InitializeComponent();
         }
 
-        private void btnBack_Click(object sender, EventArgs e)
+        private void btnCreateTransInfo_Click(object sender, EventArgs e)
         {
-            LimitHome limitHome = new LimitHome();
-            limitHome.Show();
-            Hide();
+
         }
     }
 }
