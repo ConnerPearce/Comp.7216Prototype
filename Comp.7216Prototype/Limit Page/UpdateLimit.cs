@@ -16,5 +16,12 @@ namespace Comp._7216Prototype.Limit_Page
         {
             InitializeComponent();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            LimitHome limitHome = new LimitHome();
+            limitHome.Show();
+            Hide();
+        }
     }
 }
