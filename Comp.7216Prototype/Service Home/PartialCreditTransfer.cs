@@ -10,14 +10,24 @@ using System.Windows.Forms;
 
 namespace Comp._7216Prototype.Service_Home
 {
-    public partial class DataTransfer : Form
+    public partial class PartialCreditTransfer : Form
     {
-        public DataTransfer()
+        public PartialCreditTransfer()
         {
             InitializeComponent();
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void PartialCreditTransfer_Load(object sender, EventArgs e)
         {
 
         }

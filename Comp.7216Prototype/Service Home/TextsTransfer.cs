@@ -10,14 +10,14 @@ using System.Windows.Forms;
 
 namespace Comp._7216Prototype.Service_Home
 {
-    public partial class DataTransfer : Form
+    public partial class TextsTransfer : Form
     {
-        public DataTransfer()
+        public TextsTransfer()
         {
             InitializeComponent();
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }
