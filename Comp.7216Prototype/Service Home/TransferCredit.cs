@@ -19,12 +19,36 @@ namespace Comp._7216Prototype.Service_Home
 
         private void button2_Click(object sender, EventArgs e)
         {
-
+            RemainningCreditTransfer remainningCreditTransfer = new RemainningCreditTransfer();
+            remainningCreditTransfer.Show();
+            Hide();
         }
 
         private void TransferCredit_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void backbutton_Click(object sender, EventArgs e)
+        {
+            TransferHome transferhome = new TransferHome();
+            transferhome.Show();
+            Hide();
+        }
+
+        private void transferaccountcredit_Click(object sender, EventArgs e)
+        {
+            AccountCreditTransfer accountCreditTransfer = new AccountCreditTransfer();
+            accountCreditTransfer.Show();
+            Hide();
+
+        }
+
+        private void transferpartialcredit_Click(object sender, EventArgs e)
+        {
+            PartialCreditTransfer partialCreditTransfer = new PartialCreditTransfer();
+            partialCreditTransfer.Show();
+            Hide();
         }
     }
 }

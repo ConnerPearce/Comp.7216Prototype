@@ -17,7 +17,40 @@ namespace Comp._7216Prototype.Service_Home
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void button1_click(object sender, EventArgs e)
+        {
+            TransferService transferservice = new TransferService();
+            transferservice.Show();
+            Hide();
+        }
+
+        private void TransferHome_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void backbutton_Click(object sender, EventArgs e)
+        {
+            HomeNavigation homeNavigation = new HomeNavigation();
+            homeNavigation.Show();
+            this.Hide();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            TransferCredit transferCredit = new TransferCredit();
+            transferCredit.Show();
+            Hide();
+        }
+
+        private void transferservice_Click(object sender, EventArgs e)
+        {
+            TransferService transferservice = new TransferService();
+            transferservice.Show();
+            Hide();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
         {
 
         }

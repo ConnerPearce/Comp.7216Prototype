@@ -83,31 +83,67 @@
     <Compile Include="Payee Page\CreatePayee.Designer.cs">
       <DependentUpon>CreatePayee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Payee Page\DeletePayee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payee Page\DeletePayee.Designer.cs">
+      <DependentUpon>DeletePayee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Payee Page\PayeeHome.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Payee Page\PayeeHome.Designer.cs">
       <DependentUpon>PayeeHome.cs</DependentUpon>
     </Compile>
+    <Compile Include="Payee Page\RequestPayee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payee Page\RequestPayee.Designer.cs">
+      <DependentUpon>RequestPayee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payee Page\UpdatePayee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payee Page\UpdatePayee.Designer.cs">
+      <DependentUpon>UpdatePayee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Record Page\CreateRecord.cs">
+    <Compile Include="Service Home\AccountCreditTransfer.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Record Page\CreateRecord.Designer.cs">
-      <DependentUpon>CreateRecord.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Record Page\Record Home.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Record Page\Record Home.Designer.cs">
-      <DependentUpon>Record Home.cs</DependentUpon>
+    <Compile Include="Service Home\AccountCreditTransfer.Designer.cs">
+      <DependentUpon>AccountCreditTransfer.cs</DependentUpon>
     </Compile>
     <Compile Include="Service Home\DataTransfer.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Service Home\DataTransfer.Designer.cs">
       <DependentUpon>DataTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service Home\Minutestransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service Home\Minutestransfer.Designer.cs">
+      <DependentUpon>Minutestransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service Home\PartialCreditTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service Home\PartialCreditTransfer.Designer.cs">
+      <DependentUpon>PartialCreditTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service Home\RemainningCreditTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service Home\RemainningCreditTransfer.Designer.cs">
+      <DependentUpon>RemainningCreditTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service Home\TextsTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service Home\TextsTransfer.Designer.cs">
+      <DependentUpon>TextsTransfer.cs</DependentUpon>
     </Compile>
     <Compile Include="Service Home\TransferCredit.cs">
       <SubType>Form</SubType>
@@ -127,6 +163,39 @@
     <Compile Include="Service Home\TransferService.Designer.cs">
       <DependentUpon>TransferService.cs</DependentUpon>
     </Compile>
+    <Compile Include="Transaction\CreateTransInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\CreateTransInfo.Designer.cs">
+      <DependentUpon>CreateTransInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\DeleteTransInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\DeleteTransInfo.Designer.cs">
+      <DependentUpon>DeleteTransInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\RequestTransInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\RequestTransInfo.Designer.cs">
+      <DependentUpon>RequestTransInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Transaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Transaction.Designer.cs">
+      <DependentUpon>Transaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\UpdateTransInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\UpdateTransInfo.Designer.cs">
+      <DependentUpon>UpdateTransInfo.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="HomeNavigation.resx">
+      <DependentUpon>HomeNavigation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Limit Page\Limit.resx">
       <DependentUpon>Limit.cs</DependentUpon>
     </EmbeddedResource>
@@ -136,11 +205,23 @@
     <EmbeddedResource Include="Limit Page\RemoveLimit.resx">
       <DependentUpon>RemoveLimit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Limit Page\UpdateLimit.resx">
+      <DependentUpon>UpdateLimit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Payee Page\CreatePayee.resx">
       <DependentUpon>CreatePayee.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Payee Page\DeletePayee.resx">
+      <DependentUpon>DeletePayee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Payee Page\PayeeHome.resx">
       <DependentUpon>PayeeHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payee Page\RequestPayee.resx">
+      <DependentUpon>RequestPayee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payee Page\UpdatePayee.resx">
+      <DependentUpon>UpdatePayee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -152,14 +233,23 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="Record Page\CreateRecord.resx">
-      <DependentUpon>CreateRecord.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Record Page\Record Home.resx">
-      <DependentUpon>Record Home.cs</DependentUpon>
+    <EmbeddedResource Include="Service Home\AccountCreditTransfer.resx">
+      <DependentUpon>AccountCreditTransfer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Service Home\DataTransfer.resx">
       <DependentUpon>DataTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service Home\Minutestransfer.resx">
+      <DependentUpon>Minutestransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service Home\PartialCreditTransfer.resx">
+      <DependentUpon>PartialCreditTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service Home\RemainningCreditTransfer.resx">
+      <DependentUpon>RemainningCreditTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service Home\TextsTransfer.resx">
+      <DependentUpon>TextsTransfer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Service Home\TransferCredit.resx">
       <DependentUpon>TransferCredit.cs</DependentUpon>
@@ -169,6 +259,21 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Service Home\TransferService.resx">
       <DependentUpon>TransferService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\CreateTransInfo.resx">
+      <DependentUpon>CreateTransInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\DeleteTransInfo.resx">
+      <DependentUpon>DeleteTransInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\RequestTransInfo.resx">
+      <DependentUpon>RequestTransInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Transaction.resx">
+      <DependentUpon>Transaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\UpdateTransInfo.resx">
+      <DependentUpon>UpdateTransInfo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -183,17 +288,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-undo-100.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-undo-50.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-back-to-100.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="Resources\icons8-back-to-40.png" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -8,23 +8,23 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Comp._7216Prototype.Limit_Page
+namespace Comp._7216Prototype.Payee_Page
 {
-    public partial class UpdateLimit : Form
+    public partial class RequestPayee : Form
     {
-        public UpdateLimit()
+        public RequestPayee()
         {
             InitializeComponent();
         }
 
         private void btnBack_Click(object sender, EventArgs e)
         {
-            LimitHome limitHome = new LimitHome();
-            limitHome.Show();
+            PayeeHome home = new PayeeHome();
+            home.Show();
             Hide();
         }
 
-        private void btnUpdateLimit_Click(object sender, EventArgs e)
+        private void btnRequestPayee_Click(object sender, EventArgs e)
         {
 
         }

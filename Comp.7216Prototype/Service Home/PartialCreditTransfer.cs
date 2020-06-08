@@ -10,34 +10,34 @@ using System.Windows.Forms;
 
 namespace Comp._7216Prototype.Service_Home
 {
-    public partial class DataTransfer : Form
+    public partial class PartialCreditTransfer : Form
     {
-        public DataTransfer()
+        public PartialCreditTransfer()
         {
             InitializeComponent();
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private void label3_Click(object sender, EventArgs e)
         {
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            TransferService transferService = new TransferService();
-            transferService.Show();
+            TransferCredit transferCredit = new TransferCredit();
+            transferCredit.Show();
             Hide();
         }
 
-        private void DataTransfer_Load(object sender, EventArgs e)
+        private void PartialCreditTransfer_Load(object sender, EventArgs e)
         {
 
         }
 
-        private void transferdata_Click(object sender, EventArgs e)
+        private void transferpartialcredit_Click(object sender, EventArgs e)
         {
-            string message = "Data has been transfered";
-            string title = "Transfer Data";
+            string message = "Partial credits has been transfered";
+            string title = "Transfer Partial Credit";
             MessageBox.Show(message, title);
         }
     }

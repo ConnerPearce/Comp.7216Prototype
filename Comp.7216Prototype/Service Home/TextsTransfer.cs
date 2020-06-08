@@ -10,34 +10,29 @@ using System.Windows.Forms;
 
 namespace Comp._7216Prototype.Service_Home
 {
-    public partial class DataTransfer : Form
+    public partial class TextsTransfer : Form
     {
-        public DataTransfer()
+        public TextsTransfer()
         {
             InitializeComponent();
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private void label5_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void backbutton_Click(object sender, EventArgs e)
         {
             TransferService transferService = new TransferService();
             transferService.Show();
             Hide();
         }
 
-        private void DataTransfer_Load(object sender, EventArgs e)
+        private void transfertexts_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void transferdata_Click(object sender, EventArgs e)
-        {
-            string message = "Data has been transfered";
-            string title = "Transfer Data";
+            string message = "Texts has been transfered";
+            string title = "Transfer Texts";
             MessageBox.Show(message, title);
         }
     }
