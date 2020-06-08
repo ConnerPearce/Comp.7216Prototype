@@ -115,6 +115,36 @@
     <Compile Include="Service Home\TransferService.Designer.cs">
       <DependentUpon>TransferService.cs</DependentUpon>
     </Compile>
+    <Compile Include="Transaction\CreateTransInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\CreateTransInfo.Designer.cs">
+      <DependentUpon>CreateTransInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\DeleteTransInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\DeleteTransInfo.Designer.cs">
+      <DependentUpon>DeleteTransInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\RequestTransInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\RequestTransInfo.Designer.cs">
+      <DependentUpon>RequestTransInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Transaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Transaction.Designer.cs">
+      <DependentUpon>Transaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\UpdateTransInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\UpdateTransInfo.Designer.cs">
+      <DependentUpon>UpdateTransInfo.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Limit Page\Limit.resx">
       <DependentUpon>Limit.cs</DependentUpon>
     </EmbeddedResource>
@@ -154,6 +184,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Service Home\TransferService.resx">
       <DependentUpon>TransferService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Transaction.resx">
+      <DependentUpon>Transaction.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
