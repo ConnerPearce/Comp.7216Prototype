@@ -83,11 +83,29 @@
     <Compile Include="Payee Page\CreatePayee.Designer.cs">
       <DependentUpon>CreatePayee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Payee Page\DeletePayee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payee Page\DeletePayee.Designer.cs">
+      <DependentUpon>DeletePayee.cs</DependentUpon>
+    </Compile>
     <Compile Include="Payee Page\PayeeHome.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Payee Page\PayeeHome.Designer.cs">
       <DependentUpon>PayeeHome.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payee Page\RequestPayee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payee Page\RequestPayee.Designer.cs">
+      <DependentUpon>RequestPayee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Payee Page\UpdatePayee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Payee Page\UpdatePayee.Designer.cs">
+      <DependentUpon>UpdatePayee.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -160,8 +178,17 @@
     <EmbeddedResource Include="Payee Page\CreatePayee.resx">
       <DependentUpon>CreatePayee.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Payee Page\DeletePayee.resx">
+      <DependentUpon>DeletePayee.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Payee Page\PayeeHome.resx">
       <DependentUpon>PayeeHome.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payee Page\RequestPayee.resx">
+      <DependentUpon>RequestPayee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Payee Page\UpdatePayee.resx">
+      <DependentUpon>UpdatePayee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
