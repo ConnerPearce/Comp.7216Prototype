@@ -32,6 +32,7 @@
             this.btnUpdatePayee = new System.Windows.Forms.Button();
             this.btnRequestPayee = new System.Windows.Forms.Button();
             this.btnDeletePayee = new System.Windows.Forms.Button();
+            this.lblTitle = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnCreatePayee
@@ -71,11 +72,22 @@
             this.btnDeletePayee.Text = "Delete Payee";
             this.btnDeletePayee.UseVisualStyleBackColor = true;
             // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTitle.Location = new System.Drawing.Point(104, 77);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(125, 25);
+            this.lblTitle.TabIndex = 4;
+            this.lblTitle.Text = "Payee Home";
+            // 
             // PayeeHome
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(356, 450);
+            this.ClientSize = new System.Drawing.Size(338, 450);
+            this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnDeletePayee);
             this.Controls.Add(this.btnRequestPayee);
             this.Controls.Add(this.btnUpdatePayee);
@@ -83,6 +95,7 @@
             this.Name = "PayeeHome";
             this.Text = "PayeeHome";
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -92,5 +105,6 @@
         private System.Windows.Forms.Button btnUpdatePayee;
         private System.Windows.Forms.Button btnRequestPayee;
         private System.Windows.Forms.Button btnDeletePayee;
+        private System.Windows.Forms.Label lblTitle;
     }
 }
