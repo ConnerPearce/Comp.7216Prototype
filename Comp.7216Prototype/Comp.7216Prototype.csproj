@@ -124,6 +124,9 @@
     <EmbeddedResource Include="Limit Page\RemoveLimit.resx">
       <DependentUpon>RemoveLimit.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Limit Page\UpdateLimit.resx">
+      <DependentUpon>UpdateLimit.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Payee Page\CreatePayee.resx">
       <DependentUpon>CreatePayee.cs</DependentUpon>
     </EmbeddedResource>
