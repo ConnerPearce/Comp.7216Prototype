@@ -31,9 +31,9 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.lblCurrentLimit = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.btnRemoveLimit = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.btnDeletePayee = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnBack
@@ -44,6 +44,7 @@
             this.btnBack.TabIndex = 7;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // lblCurrentLimit
             // 
@@ -63,15 +64,6 @@
             this.lblTitle.TabIndex = 5;
             this.lblTitle.Text = "Delete Payee Page";
             // 
-            // btnRemoveLimit
-            // 
-            this.btnRemoveLimit.Location = new System.Drawing.Point(57, 206);
-            this.btnRemoveLimit.Name = "btnRemoveLimit";
-            this.btnRemoveLimit.Size = new System.Drawing.Size(177, 34);
-            this.btnRemoveLimit.TabIndex = 4;
-            this.btnRemoveLimit.Text = "Delete Payee";
-            this.btnRemoveLimit.UseVisualStyleBackColor = true;
-            // 
             // textBox1
             // 
             this.textBox1.Location = new System.Drawing.Point(147, 121);
@@ -88,17 +80,27 @@
             this.label1.TabIndex = 6;
             this.label1.Text = "Enter a Credit Limit";
             // 
+            // btnDeletePayee
+            // 
+            this.btnDeletePayee.Location = new System.Drawing.Point(59, 208);
+            this.btnDeletePayee.Name = "btnDeletePayee";
+            this.btnDeletePayee.Size = new System.Drawing.Size(177, 34);
+            this.btnDeletePayee.TabIndex = 8;
+            this.btnDeletePayee.Text = "Delete Payee";
+            this.btnDeletePayee.UseVisualStyleBackColor = true;
+            this.btnDeletePayee.Click += new System.EventHandler(this.btnDeletePayee_Click);
+            // 
             // DeletePayee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(295, 311);
+            this.Controls.Add(this.btnDeletePayee);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblCurrentLimit);
             this.Controls.Add(this.lblTitle);
-            this.Controls.Add(this.btnRemoveLimit);
             this.Name = "DeletePayee";
             this.Text = "DeletePayee";
             this.ResumeLayout(false);
@@ -111,8 +113,8 @@
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblCurrentLimit;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Button btnRemoveLimit;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button btnDeletePayee;
     }
 }

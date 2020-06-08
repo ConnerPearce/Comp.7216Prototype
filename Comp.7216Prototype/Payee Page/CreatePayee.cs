@@ -16,5 +16,17 @@ namespace Comp._7216Prototype.Payee_Page
         {
             InitializeComponent();
         }
+
+        private void btnCreatePayee_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            PayeeHome home = new PayeeHome();
+            home.Show();
+            Hide();
+        }
     }
 }
