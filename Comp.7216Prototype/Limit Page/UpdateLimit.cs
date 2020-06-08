@@ -23,5 +23,10 @@ namespace Comp._7216Prototype.Limit_Page
             limitHome.Show();
             Hide();
         }
+
+        private void btnUpdateLimit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
