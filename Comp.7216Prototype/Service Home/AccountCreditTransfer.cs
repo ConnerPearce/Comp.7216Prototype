@@ -26,5 +26,19 @@ namespace Comp._7216Prototype.Service_Home
         {
 
         }
+
+        private void backbutton_Click(object sender, EventArgs e)
+        {
+            TransferCredit transferCredit = new TransferCredit();
+            transferCredit.Show();
+            Hide();
+        }
+
+        private void transferaccountcredit_Click(object sender, EventArgs e)
+        {
+            string message = "Account credits has been transfered";
+            string title = "Transfer Account Credit";
+            MessageBox.Show(message, title);
+        }
     }
 }

@@ -35,8 +35,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.transferremainningcredit = new System.Windows.Forms.Button();
+            this.backbutton = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.SuspendLayout();
@@ -106,23 +106,25 @@
             this.label7.TabIndex = 6;
             this.label7.Text = "$20";
             // 
-            // button1
+            // transferremainningcredit
             // 
-            this.button1.Location = new System.Drawing.Point(292, 297);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(147, 23);
-            this.button1.TabIndex = 7;
-            this.button1.Text = "Transfer Remaining Credit";
-            this.button1.UseVisualStyleBackColor = true;
+            this.transferremainningcredit.Location = new System.Drawing.Point(292, 297);
+            this.transferremainningcredit.Name = "transferremainningcredit";
+            this.transferremainningcredit.Size = new System.Drawing.Size(147, 23);
+            this.transferremainningcredit.TabIndex = 7;
+            this.transferremainningcredit.Text = "Transfer Remaining Credit";
+            this.transferremainningcredit.UseVisualStyleBackColor = true;
+            this.transferremainningcredit.Click += new System.EventHandler(this.transferremainningcredit_Click);
             // 
-            // button2
+            // backbutton
             // 
-            this.button2.Location = new System.Drawing.Point(30, 26);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Back";
-            this.button2.UseVisualStyleBackColor = true;
+            this.backbutton.Location = new System.Drawing.Point(30, 26);
+            this.backbutton.Name = "backbutton";
+            this.backbutton.Size = new System.Drawing.Size(75, 23);
+            this.backbutton.TabIndex = 8;
+            this.backbutton.Text = "Back";
+            this.backbutton.UseVisualStyleBackColor = true;
+            this.backbutton.Click += new System.EventHandler(this.backbutton_Click);
             // 
             // textBox1
             // 
@@ -146,8 +148,8 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.textBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.backbutton);
+            this.Controls.Add(this.transferremainningcredit);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -171,8 +173,8 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button transferremainningcredit;
+        private System.Windows.Forms.Button backbutton;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.ComboBox comboBox1;
     }

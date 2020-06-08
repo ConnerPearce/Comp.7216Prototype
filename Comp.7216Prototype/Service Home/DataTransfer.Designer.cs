@@ -37,7 +37,8 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.transferdata = new System.Windows.Forms.Button();
+            this.backbutton = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -115,26 +116,44 @@
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Items.AddRange(new object[] {
+            "Conner",
+            "Jot",
+            "Kawhina",
+            "Karl",
+            "Agassi"});
             this.comboBox1.Location = new System.Drawing.Point(302, 245);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 21);
             this.comboBox1.TabIndex = 8;
             // 
-            // button2
+            // transferdata
             // 
-            this.button2.Location = new System.Drawing.Point(311, 299);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(91, 23);
-            this.button2.TabIndex = 10;
-            this.button2.Text = "Transfer Data";
-            this.button2.UseVisualStyleBackColor = true;
+            this.transferdata.Location = new System.Drawing.Point(311, 299);
+            this.transferdata.Name = "transferdata";
+            this.transferdata.Size = new System.Drawing.Size(91, 23);
+            this.transferdata.TabIndex = 10;
+            this.transferdata.Text = "Transfer Data";
+            this.transferdata.UseVisualStyleBackColor = true;
+            this.transferdata.Click += new System.EventHandler(this.transferdata_Click);
+            // 
+            // backbutton
+            // 
+            this.backbutton.Location = new System.Drawing.Point(21, 26);
+            this.backbutton.Name = "backbutton";
+            this.backbutton.Size = new System.Drawing.Size(75, 23);
+            this.backbutton.TabIndex = 11;
+            this.backbutton.Text = "Back";
+            this.backbutton.UseVisualStyleBackColor = true;
+            this.backbutton.Click += new System.EventHandler(this.button1_Click);
             // 
             // DataTransfer
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.backbutton);
+            this.Controls.Add(this.transferdata);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox1);
@@ -146,6 +165,7 @@
             this.Controls.Add(this.label1);
             this.Name = "DataTransfer";
             this.Text = "DataTransfer";
+            this.Load += new System.EventHandler(this.DataTransfer_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -162,6 +182,7 @@
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button transferdata;
+        private System.Windows.Forms.Button backbutton;
     }
 }

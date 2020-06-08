@@ -34,8 +34,8 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
+            this.backbutton = new System.Windows.Forms.Button();
+            this.transferpartialcredit = new System.Windows.Forms.Button();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -97,24 +97,25 @@
             this.label6.TabIndex = 5;
             this.label6.Text = "Choose a Customer";
             // 
-            // button1
+            // backbutton
             // 
-            this.button1.Location = new System.Drawing.Point(12, 12);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "Back";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.backbutton.Location = new System.Drawing.Point(12, 12);
+            this.backbutton.Name = "backbutton";
+            this.backbutton.Size = new System.Drawing.Size(75, 23);
+            this.backbutton.TabIndex = 6;
+            this.backbutton.Text = "Back";
+            this.backbutton.UseVisualStyleBackColor = true;
+            this.backbutton.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // transferpartialcredit
             // 
-            this.button2.Location = new System.Drawing.Point(306, 281);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(130, 23);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "Transfer Partial Credit";
-            this.button2.UseVisualStyleBackColor = true;
+            this.transferpartialcredit.Location = new System.Drawing.Point(306, 281);
+            this.transferpartialcredit.Name = "transferpartialcredit";
+            this.transferpartialcredit.Size = new System.Drawing.Size(130, 23);
+            this.transferpartialcredit.TabIndex = 7;
+            this.transferpartialcredit.Text = "Transfer Partial Credit";
+            this.transferpartialcredit.UseVisualStyleBackColor = true;
+            this.transferpartialcredit.Click += new System.EventHandler(this.transferpartialcredit_Click);
             // 
             // comboBox1
             // 
@@ -148,8 +149,8 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.transferpartialcredit);
+            this.Controls.Add(this.backbutton);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -172,8 +173,8 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button backbutton;
+        private System.Windows.Forms.Button transferpartialcredit;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label label7;

@@ -193,6 +193,9 @@
     <Compile Include="Transaction\UpdateTransInfo.Designer.cs">
       <DependentUpon>UpdateTransInfo.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="HomeNavigation.resx">
+      <DependentUpon>HomeNavigation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Limit Page\Limit.resx">
       <DependentUpon>Limit.cs</DependentUpon>
     </EmbeddedResource>

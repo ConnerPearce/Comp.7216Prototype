@@ -21,5 +21,19 @@ namespace Comp._7216Prototype.Service_Home
         {
 
         }
+
+        private void backbutton_Click(object sender, EventArgs e)
+        {
+            TransferService transferService = new TransferService();
+            transferService.Show();
+            Hide();
+        }
+
+        private void transfertexts_Click(object sender, EventArgs e)
+        {
+            string message = "Texts has been transfered";
+            string title = "Transfer Texts";
+            MessageBox.Show(message, title);
+        }
     }
 }
