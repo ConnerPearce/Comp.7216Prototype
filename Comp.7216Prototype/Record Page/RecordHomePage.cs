@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace Comp._7216Prototype.Record_Page
 {
-    public partial class Record_Home : Form
+    public partial class RecordHomePage : Form
     {
-        public Record_Home()
+        public RecordHomePage()
         {
             InitializeComponent();
         }
