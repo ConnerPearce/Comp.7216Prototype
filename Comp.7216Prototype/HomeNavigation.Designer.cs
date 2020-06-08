@@ -30,6 +30,7 @@
         {
             this.btnCredit = new System.Windows.Forms.Button();
             this.btnPayee = new System.Windows.Forms.Button();
+            this.btnTrans = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnCredit
@@ -52,11 +53,22 @@
             this.btnPayee.UseVisualStyleBackColor = true;
             this.btnPayee.Click += new System.EventHandler(this.btnPayee_Click);
             // 
+            // btnTrans
+            // 
+            this.btnTrans.Location = new System.Drawing.Point(32, 125);
+            this.btnTrans.Name = "btnTrans";
+            this.btnTrans.Size = new System.Drawing.Size(96, 29);
+            this.btnTrans.TabIndex = 2;
+            this.btnTrans.Text = "Transaction";
+            this.btnTrans.UseVisualStyleBackColor = true;
+            this.btnTrans.Click += new System.EventHandler(this.btnTrans_Click);
+            // 
             // HomeNavigation
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(166, 286);
+            this.Controls.Add(this.btnTrans);
             this.Controls.Add(this.btnPayee);
             this.Controls.Add(this.btnCredit);
             this.Name = "HomeNavigation";
@@ -69,5 +81,6 @@
 
         private System.Windows.Forms.Button btnCredit;
         private System.Windows.Forms.Button btnPayee;
+        private System.Windows.Forms.Button btnTrans;
     }
 }

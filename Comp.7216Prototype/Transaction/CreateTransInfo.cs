@@ -16,5 +16,12 @@ namespace Comp._7216Prototype.Transaction
         {
             InitializeComponent();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            Transaction navTrans = new Transaction();
+            navTrans.Show();
+            this.Hide();
+        }
     }
 }

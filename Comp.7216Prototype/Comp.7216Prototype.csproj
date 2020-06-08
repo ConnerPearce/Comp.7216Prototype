@@ -193,6 +193,9 @@
     <Compile Include="Transaction\UpdateTransInfo.Designer.cs">
       <DependentUpon>UpdateTransInfo.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="HomeNavigation.resx">
+      <DependentUpon>HomeNavigation.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Limit Page\Limit.resx">
       <DependentUpon>Limit.cs</DependentUpon>
     </EmbeddedResource>
@@ -257,8 +260,20 @@
     <EmbeddedResource Include="Service Home\TransferService.resx">
       <DependentUpon>TransferService.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\CreateTransInfo.resx">
+      <DependentUpon>CreateTransInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\DeleteTransInfo.resx">
+      <DependentUpon>DeleteTransInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\RequestTransInfo.resx">
+      <DependentUpon>RequestTransInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Transaction\Transaction.resx">
       <DependentUpon>Transaction.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\UpdateTransInfo.resx">
+      <DependentUpon>UpdateTransInfo.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

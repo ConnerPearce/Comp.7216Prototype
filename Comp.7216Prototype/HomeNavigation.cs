@@ -1,5 +1,6 @@
 ﻿using Comp._7216Prototype.Limit_Page;
 using Comp._7216Prototype.Payee_Page;
+using Comp._7216Prototype.Transaction;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -30,6 +31,13 @@ namespace Comp._7216Prototype
         {
             PayeeHome payeeHome = new PayeeHome();
             payeeHome.Show();
+            Hide();
+        }
+
+        private void btnTrans_Click(object sender, EventArgs e)
+        {
+            Transaction.Transaction TransHome = new Transaction.Transaction();
+            TransHome.Show();
             Hide();
         }
     }
