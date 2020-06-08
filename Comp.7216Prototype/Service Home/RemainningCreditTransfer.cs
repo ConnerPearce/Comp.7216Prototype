@@ -10,19 +10,14 @@ using System.Windows.Forms;
 
 namespace Comp._7216Prototype.Service_Home
 {
-    public partial class TransferHome : Form
+    public partial class RemainningCreditTransfer : Form
     {
-        public TransferHome()
+        public RemainningCreditTransfer()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
+        private void label4_Click(object sender, EventArgs e)
         {
 
         }

@@ -8,23 +8,13 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Comp._7216Prototype.Service_Home
+namespace Comp._7216Prototype.Transaction
 {
-    public partial class TransferHome : Form
+    public partial class CreateTransInfo : Form
     {
-        public TransferHome()
+        public CreateTransInfo()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void button3_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

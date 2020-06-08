@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace Comp._7216Prototype.Service_Home
 {
-    public partial class TransferHome : Form
+    public partial class PartialCreditTransfer : Form
     {
-        public TransferHome()
+        public PartialCreditTransfer()
         {
             InitializeComponent();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -22,7 +27,7 @@ namespace Comp._7216Prototype.Service_Home
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void PartialCreditTransfer_Load(object sender, EventArgs e)
         {
 
         }

@@ -10,19 +10,19 @@ using System.Windows.Forms;
 
 namespace Comp._7216Prototype.Service_Home
 {
-    public partial class TransferHome : Form
+    public partial class Minutestransfer : Form
     {
-        public TransferHome()
+        public Minutestransfer()
         {
             InitializeComponent();
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void Minutestransfer_Load(object sender, EventArgs e)
         {
 
         }

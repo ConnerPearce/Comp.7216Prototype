@@ -109,11 +109,41 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service Home\AccountCreditTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service Home\AccountCreditTransfer.Designer.cs">
+      <DependentUpon>AccountCreditTransfer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Service Home\DataTransfer.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Service Home\DataTransfer.Designer.cs">
       <DependentUpon>DataTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service Home\Minutestransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service Home\Minutestransfer.Designer.cs">
+      <DependentUpon>Minutestransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service Home\PartialCreditTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service Home\PartialCreditTransfer.Designer.cs">
+      <DependentUpon>PartialCreditTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service Home\RemainningCreditTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service Home\RemainningCreditTransfer.Designer.cs">
+      <DependentUpon>RemainningCreditTransfer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Service Home\TextsTransfer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Service Home\TextsTransfer.Designer.cs">
+      <DependentUpon>TextsTransfer.cs</DependentUpon>
     </Compile>
     <Compile Include="Service Home\TransferCredit.cs">
       <SubType>Form</SubType>
@@ -132,6 +162,36 @@
     </Compile>
     <Compile Include="Service Home\TransferService.Designer.cs">
       <DependentUpon>TransferService.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\CreateTransInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\CreateTransInfo.Designer.cs">
+      <DependentUpon>CreateTransInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\DeleteTransInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\DeleteTransInfo.Designer.cs">
+      <DependentUpon>DeleteTransInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\RequestTransInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\RequestTransInfo.Designer.cs">
+      <DependentUpon>RequestTransInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\Transaction.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\Transaction.Designer.cs">
+      <DependentUpon>Transaction.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Transaction\UpdateTransInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Transaction\UpdateTransInfo.Designer.cs">
+      <DependentUpon>UpdateTransInfo.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Limit Page\Limit.resx">
       <DependentUpon>Limit.cs</DependentUpon>
@@ -170,8 +230,23 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Service Home\AccountCreditTransfer.resx">
+      <DependentUpon>AccountCreditTransfer.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Service Home\DataTransfer.resx">
       <DependentUpon>DataTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service Home\Minutestransfer.resx">
+      <DependentUpon>Minutestransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service Home\PartialCreditTransfer.resx">
+      <DependentUpon>PartialCreditTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service Home\RemainningCreditTransfer.resx">
+      <DependentUpon>RemainningCreditTransfer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Service Home\TextsTransfer.resx">
+      <DependentUpon>TextsTransfer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Service Home\TransferCredit.resx">
       <DependentUpon>TransferCredit.cs</DependentUpon>
@@ -181,6 +256,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Service Home\TransferService.resx">
       <DependentUpon>TransferService.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Transaction\Transaction.resx">
+      <DependentUpon>Transaction.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
