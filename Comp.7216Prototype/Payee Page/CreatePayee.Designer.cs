@@ -43,6 +43,7 @@
             this.btnBack.TabIndex = 9;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // lblSubtitle
             // 
@@ -78,6 +79,7 @@
             this.btnCreatePayee.TabIndex = 5;
             this.btnCreatePayee.Text = "Create Payee";
             this.btnCreatePayee.UseVisualStyleBackColor = true;
+            this.btnCreatePayee.Click += new System.EventHandler(this.btnCreatePayee_Click);
             // 
             // CreatePayee
             // 

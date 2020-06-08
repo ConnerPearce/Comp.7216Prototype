@@ -47,6 +47,7 @@
             this.btnBack.TabIndex = 7;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // lblCurrentLimit
             // 
@@ -74,6 +75,7 @@
             this.btnRequestPayee.TabIndex = 4;
             this.btnRequestPayee.Text = "Request Payee";
             this.btnRequestPayee.UseVisualStyleBackColor = true;
+            this.btnRequestPayee.Click += new System.EventHandler(this.btnRequestPayee_Click);
             // 
             // lblSubtitle
             // 

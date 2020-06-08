@@ -35,7 +35,7 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.lblCurrentLimit = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.btnRequestPayee = new System.Windows.Forms.Button();
+            this.btnDeletePayee = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblSubtitle2
@@ -78,6 +78,7 @@
             this.btnBack.TabIndex = 16;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // lblCurrentLimit
             // 
@@ -97,20 +98,22 @@
             this.lblTitle.TabIndex = 14;
             this.lblTitle.Text = "Update Payee Page";
             // 
-            // btnRequestPayee
+            // btnDeletePayee
             // 
-            this.btnRequestPayee.Location = new System.Drawing.Point(57, 201);
-            this.btnRequestPayee.Name = "btnRequestPayee";
-            this.btnRequestPayee.Size = new System.Drawing.Size(177, 34);
-            this.btnRequestPayee.TabIndex = 13;
-            this.btnRequestPayee.Text = "Update Payee";
-            this.btnRequestPayee.UseVisualStyleBackColor = true;
+            this.btnDeletePayee.Location = new System.Drawing.Point(57, 186);
+            this.btnDeletePayee.Name = "btnDeletePayee";
+            this.btnDeletePayee.Size = new System.Drawing.Size(177, 34);
+            this.btnDeletePayee.TabIndex = 21;
+            this.btnDeletePayee.Text = "Update Payee";
+            this.btnDeletePayee.UseVisualStyleBackColor = true;
+            this.btnDeletePayee.Click += new System.EventHandler(this.btnDeletePayee_Click);
             // 
             // UpdatePayee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(276, 272);
+            this.Controls.Add(this.btnDeletePayee);
             this.Controls.Add(this.lblSubtitle2);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.lblSubtitle);
@@ -118,7 +121,6 @@
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblCurrentLimit);
             this.Controls.Add(this.lblTitle);
-            this.Controls.Add(this.btnRequestPayee);
             this.Name = "UpdatePayee";
             this.Text = "UpdatePayee";
             this.ResumeLayout(false);
@@ -134,6 +136,6 @@
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblCurrentLimit;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Button btnRequestPayee;
+        private System.Windows.Forms.Button btnDeletePayee;
     }
 }
