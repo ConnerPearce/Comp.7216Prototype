@@ -11,6 +11,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Comp._7216Prototype.Record_Page;
 
 namespace Comp._7216Prototype
 {
@@ -44,6 +45,13 @@ namespace Comp._7216Prototype
         {
             TransferHome transferhome = new TransferHome();
             transferhome.Show();
+            Hide();
+        }
+
+        private void btnRecord_Click(object sender, EventArgs e)
+        {
+            RecordHomePage recordHome = new RecordHomePage();
+            recordHome.Show();
             Hide();
         }
     }
