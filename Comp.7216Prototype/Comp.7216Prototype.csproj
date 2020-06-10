@@ -115,11 +115,23 @@
     <Compile Include="Record Page\CreateRecord.Designer.cs">
       <DependentUpon>CreateRecord.cs</DependentUpon>
     </Compile>
+    <Compile Include="Record Page\DeleteRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Record Page\DeleteRecord.Designer.cs">
+      <DependentUpon>DeleteRecord.cs</DependentUpon>
+    </Compile>
     <Compile Include="Record Page\RecordHomePage.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Record Page\RecordHomePage.Designer.cs">
       <DependentUpon>RecordHomePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Record Page\RequestRecord.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Record Page\RequestRecord.Designer.cs">
+      <DependentUpon>RequestRecord.cs</DependentUpon>
     </Compile>
     <Compile Include="Record Page\UpdateRecord.cs">
       <SubType>Form</SubType>
@@ -254,8 +266,14 @@
     <EmbeddedResource Include="Record Page\CreateRecord.resx">
       <DependentUpon>CreateRecord.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Record Page\DeleteRecord.resx">
+      <DependentUpon>DeleteRecord.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Record Page\RecordHomePage.resx">
       <DependentUpon>RecordHomePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Record Page\RequestRecord.resx">
+      <DependentUpon>RequestRecord.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Record Page\UpdateRecord.resx">
       <DependentUpon>UpdateRecord.cs</DependentUpon>
@@ -315,6 +333,8 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="Resources\icons8-cancel-96.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

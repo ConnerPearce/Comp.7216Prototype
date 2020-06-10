@@ -40,7 +40,7 @@
             // 
             this.lblRecordManagment.AutoSize = true;
             this.lblRecordManagment.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F);
-            this.lblRecordManagment.Location = new System.Drawing.Point(53, 47);
+            this.lblRecordManagment.Location = new System.Drawing.Point(52, 83);
             this.lblRecordManagment.Name = "lblRecordManagment";
             this.lblRecordManagment.Size = new System.Drawing.Size(434, 39);
             this.lblRecordManagment.TabIndex = 0;
@@ -49,52 +49,57 @@
             // btnCreate
             // 
             this.btnCreate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnCreate.Location = new System.Drawing.Point(196, 131);
+            this.btnCreate.Location = new System.Drawing.Point(195, 167);
             this.btnCreate.Name = "btnCreate";
             this.btnCreate.Size = new System.Drawing.Size(149, 48);
             this.btnCreate.TabIndex = 1;
             this.btnCreate.Text = "Create Record";
             this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click);
             // 
             // btnUpdate
             // 
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnUpdate.Location = new System.Drawing.Point(196, 198);
+            this.btnUpdate.Location = new System.Drawing.Point(195, 234);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(149, 48);
             this.btnUpdate.TabIndex = 2;
             this.btnUpdate.Text = "Update Record";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnDelete
             // 
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnDelete.Location = new System.Drawing.Point(196, 263);
+            this.btnDelete.Location = new System.Drawing.Point(195, 299);
             this.btnDelete.Name = "btnDelete";
             this.btnDelete.Size = new System.Drawing.Size(149, 48);
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Delete Record";
             this.btnDelete.UseVisualStyleBackColor = true;
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
             // 
             // btnRequest
             // 
             this.btnRequest.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnRequest.Location = new System.Drawing.Point(196, 328);
+            this.btnRequest.Location = new System.Drawing.Point(195, 364);
             this.btnRequest.Name = "btnRequest";
             this.btnRequest.Size = new System.Drawing.Size(149, 48);
             this.btnRequest.TabIndex = 4;
             this.btnRequest.Text = "Request Record";
             this.btnRequest.UseVisualStyleBackColor = true;
+            this.btnRequest.Click += new System.EventHandler(this.btnRequest_Click);
             // 
             // btnBack
             // 
             this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnBack.Location = new System.Drawing.Point(12, 432);
+            this.btnBack.Location = new System.Drawing.Point(12, 12);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(82, 34);
             this.btnBack.TabIndex = 23;
             this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
             // 
             // RecordHomePage
             // 

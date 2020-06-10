@@ -16,5 +16,40 @@ namespace Comp._7216Prototype.Record_Page
         {
             InitializeComponent();
         }
+
+        private void btnBack_Click(object sender, EventArgs e)
+        {
+            HomeNavigation home = new HomeNavigation();
+            home.Show();
+            Hide();
+        }
+
+        private void btnCreate_Click(object sender, EventArgs e)
+        {
+            CreateRecord createHome = new CreateRecord();
+            createHome.Show();
+            Hide();
+        }
+
+        private void btnUpdate_Click(object sender, EventArgs e)
+        {
+            UpdateRecord updateHome = new UpdateRecord();
+            updateHome.Show();
+            Hide();
+        }
+
+        private void btnDelete_Click(object sender, EventArgs e)
+        {
+            DeleteRecord deleteHome = new DeleteRecord();
+            deleteHome.Show();
+            Hide();
+        }
+
+        private void btnRequest_Click(object sender, EventArgs e)
+        {
+            RequestRecord requestHome = new RequestRecord();
+            requestHome.Show();
+            Hide();
+        }
     }
 }
