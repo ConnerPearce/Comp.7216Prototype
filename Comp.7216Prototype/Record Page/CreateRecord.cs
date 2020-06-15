@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Comp._7216Prototype.Database_Files.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -56,6 +57,48 @@ namespace Comp._7216Prototype.Record_Page
             txtTransaction.Clear();
 
             txtCustomer.Focus();
+        }
+
+        private async void btnSubmit_Click(object sender, EventArgs e)
+        {
+            RecordManagement recordModel = new RecordManagement();
+            var result = CheckTextBoxes(txtCustomer.Text, txtPayment.Text, txtTransfer.Text, txtTransaction.Text);
+
+            if (result != "Success")
+            {
+                SendErrorMessage(result);
+            }
+        }
+
+        private void SendErrorMessage(string outcome)
+        {
+            string message = $"{outcome} textbox is required";
+            string caption = "Detected Empty Textboxes";
+
+            MessageBox.Show(message, caption);
+
+        }
+
+        private string CheckTextBoxes(string customer, string payment, string transfer, string transaction)
+        {
+            if (string.IsNullOrEmpty(customer))
+            {
+                return "Customer";
+            }
+            else if (string.IsNullOrEmpty(payment))
+            {
+                return "Payment";
+            }
+            else if (string.IsNullOrEmpty(transfer))
+            {
+                return "Transfer";
+            }
+            else if (string.IsNullOrEmpty(transaction))
+            {
+                return "Transaction";
+            }
+            else
+                return "success";
         }
     }
 }
