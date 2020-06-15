@@ -82,6 +82,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Database Files\Data\LimitRecord.cs" />
+    <Compile Include="Database Files\Data\TransactionDetails.cs" />
     <Compile Include="HomeNavigation.cs">
       <SubType>Form</SubType>
     </Compile>
