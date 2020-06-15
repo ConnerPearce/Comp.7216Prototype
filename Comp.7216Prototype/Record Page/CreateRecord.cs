@@ -1,4 +1,5 @@
-﻿using Comp._7216Prototype.Database_Files.Data;
+﻿using Comp._7216Prototype.Database_Files;
+using Comp._7216Prototype.Database_Files.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,9 +14,12 @@ namespace Comp._7216Prototype.Record_Page
 {
     public partial class CreateRecord : Form
     {
+        private readonly string CollectionName = "RecordDetails";
+        private DataService dataService;//initialises the dataservice class to enable access to the database
         public CreateRecord()
         {
             InitializeComponent();
+            dataService = new DataService(); //assigns the class on run time
         }
 
         private void btnBack_Click(object sender, EventArgs e)
@@ -51,23 +55,42 @@ namespace Comp._7216Prototype.Record_Page
 
         private void btnClearAll_Click(object sender, EventArgs e)
         {
-            txtCustomer.Clear();
-            txtPayment.Clear();
-            txtTransfer.Clear();
-            txtTransaction.Clear();
-
-            txtCustomer.Focus();
+            ClearAllTextboxes();
         }
 
         private async void btnSubmit_Click(object sender, EventArgs e)
         {
+            //this is accessing record management class
             RecordManagement recordModel = new RecordManagement();
+            //this will call the the validation method to check if any of the textboes are null or empty
             var result = CheckTextBoxes(txtCustomer.Text, txtPayment.Text, txtTransfer.Text, txtTransaction.Text);
 
-            if (result != "Success")
+            if (result != "success")//if the result does not return a success string....
             {
-                SendErrorMessage(result);
+                SendErrorMessage(result);//call the error message method
             }
+            else//otherwise
+            {
+                await dataService.InsertAsync(new RecordManagement()//call the data services class, assign each textbox text to the model class 
+                                                                    //and send it to the database
+                {
+                    CustomerID = txtCustomer.Text,
+                    PaymentID = txtPayment.Text,
+                    TransferID = txtTransfer.Text,
+                    TransactionID = txtTransaction.Text
+                }, CollectionName);
+
+                SendAddedMessage();//call the added message method
+                ClearAllTextboxes();//call the clear all textboxes method
+            }
+        }
+
+        private void SendAddedMessage()
+        {
+            string message = "Record has been saved to the database";
+            string caption = "Insert Successful";
+
+            MessageBox.Show(message, caption);//display a message to the admin that the record has been successfully sent 
         }
 
         private void SendErrorMessage(string outcome)
@@ -75,11 +98,10 @@ namespace Comp._7216Prototype.Record_Page
             string message = $"{outcome} textbox is required";
             string caption = "Detected Empty Textboxes";
 
-            MessageBox.Show(message, caption);
-
+            MessageBox.Show(message, caption);//display a message to the admin that there is a textbox is null/empty
         }
 
-        private string CheckTextBoxes(string customer, string payment, string transfer, string transaction)
+        private string CheckTextBoxes(string customer, string payment, string transfer, string transaction)//validate all textboxes in Creat a Record page
         {
             if (string.IsNullOrEmpty(customer))
             {
@@ -99,6 +121,16 @@ namespace Comp._7216Prototype.Record_Page
             }
             else
                 return "success";
+        }
+
+        private void ClearAllTextboxes()//this method clears all textboxes and focuses the cursor to the CustomerID Page
+        {
+            txtCustomer.Clear();
+            txtPayment.Clear();
+            txtTransfer.Clear();
+            txtTransaction.Clear();
+
+            txtCustomer.Focus();
         }
     }
 }
