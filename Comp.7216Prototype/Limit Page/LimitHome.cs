@@ -18,20 +18,6 @@ namespace Comp._7216Prototype.Limit_Page
             InitializeComponent();
         }
 
-        private void btnCreate_Click(object sender, EventArgs e)
-        {
-            Limit create = new Limit();
-            create.Show();
-            Hide();
-        }
-
-        private void btnRemove_Click(object sender, EventArgs e)
-        {
-            RemoveLimit remove = new RemoveLimit();
-            remove.Show();
-            Hide();
-        }
-
         private void btnBack_Click_1(object sender, EventArgs e)
         {
             HomeNavigation homeNavigation = new HomeNavigation();
@@ -43,6 +29,20 @@ namespace Comp._7216Prototype.Limit_Page
         {
             UpdateLimit updateLimit = new UpdateLimit();
             updateLimit.Show();
+            Hide();
+        }
+
+        private void btnCreate_Click_1(object sender, EventArgs e)
+        {
+            Limit create = new Limit();
+            create.Show();
+            Hide();
+        }
+
+        private void btnRemove_Click_1(object sender, EventArgs e)
+        {
+            RemoveLimit remove = new RemoveLimit();
+            remove.Show();
             Hide();
         }
     }

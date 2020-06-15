@@ -43,6 +43,7 @@
             this.btnRemove.TabIndex = 0;
             this.btnRemove.Text = "Remove Limit";
             this.btnRemove.UseVisualStyleBackColor = true;
+            this.btnRemove.Click += new System.EventHandler(this.btnRemove_Click_1);
             // 
             // btnCreate
             // 
@@ -52,6 +53,7 @@
             this.btnCreate.TabIndex = 1;
             this.btnCreate.Text = "Create Limit";
             this.btnCreate.UseVisualStyleBackColor = true;
+            this.btnCreate.Click += new System.EventHandler(this.btnCreate_Click_1);
             // 
             // btnUpdate
             // 
