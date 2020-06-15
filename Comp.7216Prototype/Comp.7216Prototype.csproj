@@ -81,6 +81,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Database Files\Data\LimitRecord.cs" />
     <Compile Include="HomeNavigation.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -371,9 +372,7 @@
   <ItemGroup>
     <None Include="Resources\icons8-cancel-96.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Database Files\Data\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\MongoDB.Libmongocrypt.1.0.0\build\MongoDB.Libmongocrypt.targets" Condition="Exists('..\packages\MongoDB.Libmongocrypt.1.0.0\build\MongoDB.Libmongocrypt.targets')" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
