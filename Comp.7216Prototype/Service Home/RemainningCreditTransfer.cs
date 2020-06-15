@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Comp._7216Prototype.Database_Files;
+using Comp._7216Prototype.Database_Files.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,11 +31,27 @@ namespace Comp._7216Prototype.Service_Home
             Hide();
         }
 
-        private void transferremainningcredit_Click(object sender, EventArgs e)
+        private async void transferremainningcredit_Click(object sender, EventArgs e)
         {
-            string message = "Remainning credits has been transfered";
-            string title = "Transfer Remainning Credit";
-            MessageBox.Show(message, title);
+           
+            if (!string.IsNullOrWhiteSpace(textBox1.Text) && !string.IsNullOrWhiteSpace(comboBox1.SelectedItem.ToString()))
+            {
+                DataService dataService = new DataService();
+
+                await dataService.InsertAsync(new TransferDetails()
+                {
+                    TransferAmount = textBox1.Text,
+                    TransferType = "Remainning Credit",
+                    Payed = true,
+                    PayeeID = "5ee40637021fde6dc4b5621d"
+                }, "TransferDetails");
+                string message = "Remainning credits has been transfered";
+                string title = "Transfer Remainning Credit";
+                MessageBox.Show(message, title);
+
+            }
+            else
+                MessageBox.Show("Fields can not be empty");
         }
     }
 }
