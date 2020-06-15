@@ -36,11 +36,6 @@ namespace Comp._7216Prototype
             Hide();
         }
 
-        private void HomeNavigation_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void Transfer_Click(object sender, EventArgs e)
         {
             TransferHome transferhome = new TransferHome();

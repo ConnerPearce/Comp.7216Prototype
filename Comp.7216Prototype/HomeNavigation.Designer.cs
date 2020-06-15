@@ -85,7 +85,6 @@
             this.Controls.Add(this.btnCredit);
             this.Name = "HomeNavigation";
             this.Text = "HomeNavigation";
-            this.Load += new System.EventHandler(this.HomeNavigation_Load);
             this.ResumeLayout(false);
 
         }
