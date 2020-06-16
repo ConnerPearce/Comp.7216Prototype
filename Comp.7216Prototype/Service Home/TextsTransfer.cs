@@ -35,7 +35,7 @@ namespace Comp._7216Prototype.Service_Home
         {
             
 
-            if (!string.IsNullOrWhiteSpace(textBox1.Text) && !string.IsNullOrWhiteSpace(comboBox1.SelectedItem.ToString()))
+            if (!string.IsNullOrWhiteSpace(textBox1.Text) &&comboBox1.SelectedItem != null && !string.IsNullOrWhiteSpace(comboBox1.SelectedItem.ToString()))
             {
                 DataService dataService = new DataService();
 
@@ -44,8 +44,9 @@ namespace Comp._7216Prototype.Service_Home
                     TransferAmount = textBox1.Text,
                     TransferType = "Minutes Transfer",
                     Payed = true,
+                    
                     PayeeID = "5ee40637021fde6dc4b5621d"
-                }, "TransferDetails");
+                }, "TransferDetails") ;
 
                 string message = "Texts has been transfered";
                 string title = "Transfer Texts";
@@ -53,6 +54,11 @@ namespace Comp._7216Prototype.Service_Home
             }
             else
                 MessageBox.Show("Fields can not be empty");
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }
