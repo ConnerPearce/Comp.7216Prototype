@@ -30,9 +30,11 @@
         {
             this.btnBack = new System.Windows.Forms.Button();
             this.lblSubtitle = new System.Windows.Forms.Label();
-            this.txtCreate = new System.Windows.Forms.TextBox();
+            this.txtCreateId = new System.Windows.Forms.TextBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnCreatePayee = new System.Windows.Forms.Button();
+            this.lblSubtitle2 = new System.Windows.Forms.Label();
+            this.txtUsername = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnBack
@@ -48,18 +50,18 @@
             // lblSubtitle
             // 
             this.lblSubtitle.AutoSize = true;
-            this.lblSubtitle.Location = new System.Drawing.Point(38, 150);
+            this.lblSubtitle.Location = new System.Drawing.Point(16, 116);
             this.lblSubtitle.Name = "lblSubtitle";
-            this.lblSubtitle.Size = new System.Drawing.Size(95, 13);
+            this.lblSubtitle.Size = new System.Drawing.Size(93, 13);
             this.lblSubtitle.TabIndex = 8;
-            this.lblSubtitle.Text = "Enter a Credit Limit";
+            this.lblSubtitle.Text = "Enter Customer ID";
             // 
-            // txtCreate
+            // txtCreateId
             // 
-            this.txtCreate.Location = new System.Drawing.Point(139, 147);
-            this.txtCreate.Name = "txtCreate";
-            this.txtCreate.Size = new System.Drawing.Size(100, 20);
-            this.txtCreate.TabIndex = 7;
+            this.txtCreateId.Location = new System.Drawing.Point(139, 113);
+            this.txtCreateId.Name = "txtCreateId";
+            this.txtCreateId.Size = new System.Drawing.Size(100, 20);
+            this.txtCreateId.TabIndex = 7;
             // 
             // lblTitle
             // 
@@ -81,14 +83,32 @@
             this.btnCreatePayee.UseVisualStyleBackColor = true;
             this.btnCreatePayee.Click += new System.EventHandler(this.btnCreatePayee_Click);
             // 
+            // lblSubtitle2
+            // 
+            this.lblSubtitle2.AutoSize = true;
+            this.lblSubtitle2.Location = new System.Drawing.Point(16, 152);
+            this.lblSubtitle2.Name = "lblSubtitle2";
+            this.lblSubtitle2.Size = new System.Drawing.Size(88, 13);
+            this.lblSubtitle2.TabIndex = 11;
+            this.lblSubtitle2.Text = "Enter User Name";
+            // 
+            // txtUsername
+            // 
+            this.txtUsername.Location = new System.Drawing.Point(139, 149);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(100, 20);
+            this.txtUsername.TabIndex = 10;
+            // 
             // CreatePayee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(293, 272);
+            this.Controls.Add(this.lblSubtitle2);
+            this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblSubtitle);
-            this.Controls.Add(this.txtCreate);
+            this.Controls.Add(this.txtCreateId);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnCreatePayee);
             this.Name = "CreatePayee";
@@ -102,8 +122,10 @@
 
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblSubtitle;
-        private System.Windows.Forms.TextBox txtCreate;
+        private System.Windows.Forms.TextBox txtCreateId;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button btnCreatePayee;
+        private System.Windows.Forms.Label lblSubtitle2;
+        private System.Windows.Forms.TextBox txtUsername;
     }
 }

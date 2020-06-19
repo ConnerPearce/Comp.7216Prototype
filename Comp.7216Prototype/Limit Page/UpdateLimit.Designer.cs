@@ -33,6 +33,8 @@
             this.label2 = new System.Windows.Forms.Label();
             this.txtUpdate = new System.Windows.Forms.TextBox();
             this.btnUpdateLimit = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
+            this.txtLimitID = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // btnBack
@@ -58,15 +60,15 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(96, 122);
+            this.label2.Location = new System.Drawing.Point(88, 140);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(66, 13);
+            this.label2.Size = new System.Drawing.Size(72, 13);
             this.label2.TabIndex = 5;
-            this.label2.Text = "Update Limit";
+            this.label2.Text = "Updated Limit";
             // 
             // txtUpdate
             // 
-            this.txtUpdate.Location = new System.Drawing.Point(168, 119);
+            this.txtUpdate.Location = new System.Drawing.Point(160, 140);
             this.txtUpdate.Name = "txtUpdate";
             this.txtUpdate.Size = new System.Drawing.Size(100, 20);
             this.txtUpdate.TabIndex = 4;
@@ -81,11 +83,29 @@
             this.btnUpdateLimit.UseVisualStyleBackColor = true;
             this.btnUpdateLimit.Click += new System.EventHandler(this.btnUpdateLimit_Click);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(88, 105);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(42, 13);
+            this.label3.TabIndex = 8;
+            this.label3.Text = "Limit ID";
+            // 
+            // txtLimitID
+            // 
+            this.txtLimitID.Location = new System.Drawing.Point(160, 105);
+            this.txtLimitID.Name = "txtLimitID";
+            this.txtLimitID.Size = new System.Drawing.Size(100, 20);
+            this.txtLimitID.TabIndex = 7;
+            // 
             // UpdateLimit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(351, 250);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.txtLimitID);
             this.Controls.Add(this.btnUpdateLimit);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.txtUpdate);
@@ -105,5 +125,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtUpdate;
         private System.Windows.Forms.Button btnUpdateLimit;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.TextBox txtLimitID;
     }
 }

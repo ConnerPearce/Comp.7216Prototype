@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Comp._7216Prototype.Database_Files;
+using Comp._7216Prototype.Database_Files.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -29,11 +31,34 @@ namespace Comp._7216Prototype.Service_Home
             Hide();
         }
 
-        private void transfertexts_Click(object sender, EventArgs e)
+        private async void transfertexts_Click(object sender, EventArgs e)
         {
-            string message = "Texts has been transfered";
-            string title = "Transfer Texts";
-            MessageBox.Show(message, title);
+            
+
+            if (!string.IsNullOrWhiteSpace(textBox1.Text) &&comboBox1.SelectedItem != null && !string.IsNullOrWhiteSpace(comboBox1.SelectedItem.ToString()))
+            {
+                DataService dataService = new DataService();
+
+                await dataService.InsertAsync(new TransferDetails()
+                {
+                    TransferAmount = textBox1.Text,
+                    TransferType = "Minutes Transfer",
+                    Payed = true,
+                    
+                    PayeeID = "5ee40637021fde6dc4b5621d"
+                }, "TransferDetails") ;
+
+                string message = "Texts has been transfered";
+                string title = "Transfer Texts";
+                MessageBox.Show(message, title);
+            }
+            else
+                MessageBox.Show("Fields can not be empty");
+        }
+
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

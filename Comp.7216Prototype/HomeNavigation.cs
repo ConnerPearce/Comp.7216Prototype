@@ -2,6 +2,7 @@
 using Comp._7216Prototype.Payee_Page;
 using Comp._7216Prototype.Transaction;
 using Comp._7216Prototype.Service_Home;
+using Comp._7216Prototype.Transaction;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -47,6 +48,13 @@ namespace Comp._7216Prototype
         {
             RecordHomePage recordHome = new RecordHomePage();
             recordHome.Show();
+            Hide();
+        }
+
+        private void btnTransaction_Click(object sender, EventArgs e)
+        {
+            Transaction.Transaction TransactionHome = new Transaction.Transaction();
+            TransactionHome.Show();
             Hide();
         }
     }
