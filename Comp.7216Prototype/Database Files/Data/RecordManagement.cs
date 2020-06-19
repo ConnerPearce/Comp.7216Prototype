@@ -1,5 +1,6 @@
 ﻿using MongoDB.Bson;
 using MongoDB.Bson.Serialization.Attributes;
+using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,5 +18,9 @@ namespace Comp._7216Prototype.Database_Files.Data
         public string PaymentID { get; set; }
         public string TransferID { get; set; }
         public string TransactionID { get; set; }
+
+        
     }
+
+    
 }

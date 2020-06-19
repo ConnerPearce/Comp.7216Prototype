@@ -31,11 +31,14 @@ namespace Comp._7216Prototype.Transaction
         {
             DataService dataService = new DataService();
 
-            if (string.IsNullOrEmpty(txtTransID.Text))
+            if (!string.IsNullOrEmpty(txtTransID.Text))
             {
                 bool success = await dataService.DeleteAsync<TransactionDetails>(txtTransID.Text, CollectionName);
                 if (success)
+                {
                     MessageBox.Show("Transaction Deleted");
+                    txtTransID.Text = "";
+                }
                 else
                     MessageBox.Show("Transaction Unable to be Deleted");
             }

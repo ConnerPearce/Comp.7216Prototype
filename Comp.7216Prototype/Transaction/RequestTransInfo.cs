@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Comp._7216Prototype.Database_Files;
+using Comp._7216Prototype.Database_Files.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,7 @@ namespace Comp._7216Prototype.Transaction
 {
     public partial class RequestTransInfo : Form
     {
+        private readonly string CollectionName = "TransactionDetails";
         public RequestTransInfo()
         {
             InitializeComponent();
@@ -22,71 +25,25 @@ namespace Comp._7216Prototype.Transaction
             Transaction navTrans = new Transaction();
             navTrans.Show();
             this.Hide();
-        }
-
-        private void lblTransactionID_Click(object sender, EventArgs e)
+        } 
+        
+        private async void btnGetInfo_Click(object sender, EventArgs e)
         {
+            DataService dataService = new DataService();
+            if (!string.IsNullOrEmpty(txtTransID.Text))
+            {
+                var oldRecord = await dataService.GetRecordByIdAsync<TransactionDetails>(CollectionName, txtTransID.Text);
 
-        }
-
-        private void txtTransID_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPaymentType_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblPaymentType_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPaymentAmount_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblPaymentAmount_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtItemPurchased_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblItemPurchased_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtDateCreated_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblDateCreated_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtCustomerID_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblCustomerID_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblTitle_Click(object sender, EventArgs e)
-        {
-
+                txtCustomerID.Text = oldRecord.CustomerID;
+                txtDateCreated.Text = oldRecord.DateCreated.ToString();
+                txtItemPurchased.Text = oldRecord.ItemPurchased;
+                txtPaymentAmount.Text = oldRecord.PaymentAmount.ToString();
+                txtPaymentType.Text = oldRecord.PaymentType;
+            }
+            else
+            {
+                MessageBox.Show("Please enter something");
+            }
         }
     }
 }
