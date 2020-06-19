@@ -13,7 +13,7 @@ namespace Comp._7216Prototype.Database_Files.Data
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string id { get; set; }
-        public int CardCVV { get; set; }
+        public int CardCvv { get; set; }
         public int CardDetails { get; set; }
         public string CardHolderName { get; set; }
         public DateTime ExpiryDate { get; set; }
