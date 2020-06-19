@@ -1,4 +1,5 @@
-﻿using MongoDB.Bson;
+﻿using Comp._7216Prototype.Database_Files.Data;
+using MongoDB.Bson;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
@@ -121,6 +122,28 @@ namespace Comp._7216Prototype.Database_Files
             {
                 return false;
             }
+
+        }
+
+        public async Task<bool> DeletePayeeAsync<T>(string payeeID, string uID)
+        {
+            try
+            {
+                var item = db.GetCollection<PayeeDetails>("PayeeDetails");
+                var filter = Builders<PayeeDetails>.Filter.Where(e => e.CustomerId == payeeID && e.UserId == uID);
+                if (item == null)
+                    return false;
+
+                var result = await item.DeleteOneAsync(filter);
+
+                return result.IsAcknowledged && result.DeletedCount > 0;
+            }
+            catch 
+            {
+
+                return false;
+            }
+
 
         }
 

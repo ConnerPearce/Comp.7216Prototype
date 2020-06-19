@@ -13,6 +13,7 @@ namespace Comp._7216Prototype.Database_Files.Data
         [BsonId]
         [BsonRepresentation(BsonType.ObjectId)]
         public string id { get; set; }
+        public string UserId { get; set; }
         public string UserName { get; set; }
         public string CustomerId { get; set; }
     }
