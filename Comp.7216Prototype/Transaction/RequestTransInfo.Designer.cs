@@ -42,11 +42,12 @@
             this.lblTitle = new System.Windows.Forms.Label();
             this.txtTransID = new System.Windows.Forms.TextBox();
             this.lblTransactionID = new System.Windows.Forms.Label();
+            this.btnGetInfo = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(134, 315);
+            this.btnBack.Location = new System.Drawing.Point(134, 367);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(78, 34);
             this.btnBack.TabIndex = 25;
@@ -56,93 +57,88 @@
             // 
             // txtPaymentType
             // 
-            this.txtPaymentType.Location = new System.Drawing.Point(134, 230);
+            this.txtPaymentType.Location = new System.Drawing.Point(134, 319);
             this.txtPaymentType.Name = "txtPaymentType";
+            this.txtPaymentType.ReadOnly = true;
             this.txtPaymentType.Size = new System.Drawing.Size(164, 20);
             this.txtPaymentType.TabIndex = 23;
-            this.txtPaymentType.TextChanged += new System.EventHandler(this.txtPaymentType_TextChanged);
             // 
             // lblPaymentType
             // 
             this.lblPaymentType.AutoSize = true;
-            this.lblPaymentType.Location = new System.Drawing.Point(47, 233);
+            this.lblPaymentType.Location = new System.Drawing.Point(47, 322);
             this.lblPaymentType.Name = "lblPaymentType";
             this.lblPaymentType.Size = new System.Drawing.Size(75, 13);
             this.lblPaymentType.TabIndex = 22;
             this.lblPaymentType.Text = "Payment Type";
-            this.lblPaymentType.Click += new System.EventHandler(this.lblPaymentType_Click);
             // 
             // txtPaymentAmount
             // 
-            this.txtPaymentAmount.Location = new System.Drawing.Point(134, 194);
+            this.txtPaymentAmount.Location = new System.Drawing.Point(134, 283);
             this.txtPaymentAmount.Name = "txtPaymentAmount";
+            this.txtPaymentAmount.ReadOnly = true;
             this.txtPaymentAmount.Size = new System.Drawing.Size(164, 20);
             this.txtPaymentAmount.TabIndex = 21;
-            this.txtPaymentAmount.TextChanged += new System.EventHandler(this.txtPaymentAmount_TextChanged);
             // 
             // lblPaymentAmount
             // 
             this.lblPaymentAmount.AutoSize = true;
-            this.lblPaymentAmount.Location = new System.Drawing.Point(41, 197);
+            this.lblPaymentAmount.Location = new System.Drawing.Point(41, 286);
             this.lblPaymentAmount.Name = "lblPaymentAmount";
             this.lblPaymentAmount.Size = new System.Drawing.Size(87, 13);
             this.lblPaymentAmount.TabIndex = 20;
             this.lblPaymentAmount.Text = "Payment Amount";
-            this.lblPaymentAmount.Click += new System.EventHandler(this.lblPaymentAmount_Click);
             // 
             // txtItemPurchased
             // 
-            this.txtItemPurchased.Location = new System.Drawing.Point(134, 157);
+            this.txtItemPurchased.Location = new System.Drawing.Point(134, 246);
             this.txtItemPurchased.Name = "txtItemPurchased";
+            this.txtItemPurchased.ReadOnly = true;
             this.txtItemPurchased.Size = new System.Drawing.Size(164, 20);
             this.txtItemPurchased.TabIndex = 19;
-            this.txtItemPurchased.TextChanged += new System.EventHandler(this.txtItemPurchased_TextChanged);
             // 
             // lblItemPurchased
             // 
             this.lblItemPurchased.AutoSize = true;
-            this.lblItemPurchased.Location = new System.Drawing.Point(47, 160);
+            this.lblItemPurchased.Location = new System.Drawing.Point(47, 249);
             this.lblItemPurchased.Name = "lblItemPurchased";
             this.lblItemPurchased.Size = new System.Drawing.Size(81, 13);
             this.lblItemPurchased.TabIndex = 18;
             this.lblItemPurchased.Text = "Item Purchased";
-            this.lblItemPurchased.Click += new System.EventHandler(this.lblItemPurchased_Click);
             // 
             // txtDateCreated
             // 
-            this.txtDateCreated.Location = new System.Drawing.Point(134, 119);
+            this.txtDateCreated.Location = new System.Drawing.Point(134, 208);
             this.txtDateCreated.Name = "txtDateCreated";
+            this.txtDateCreated.ReadOnly = true;
             this.txtDateCreated.Size = new System.Drawing.Size(164, 20);
             this.txtDateCreated.TabIndex = 17;
-            this.txtDateCreated.TextChanged += new System.EventHandler(this.txtDateCreated_TextChanged);
             // 
             // lblDateCreated
             // 
             this.lblDateCreated.AutoSize = true;
-            this.lblDateCreated.Location = new System.Drawing.Point(58, 122);
+            this.lblDateCreated.Location = new System.Drawing.Point(58, 211);
             this.lblDateCreated.Name = "lblDateCreated";
             this.lblDateCreated.Size = new System.Drawing.Size(70, 13);
             this.lblDateCreated.TabIndex = 16;
             this.lblDateCreated.Text = "Date Created";
-            this.lblDateCreated.Click += new System.EventHandler(this.lblDateCreated_Click);
             // 
             // txtCustomerID
             // 
-            this.txtCustomerID.Location = new System.Drawing.Point(134, 82);
+            this.txtCustomerID.Location = new System.Drawing.Point(134, 171);
             this.txtCustomerID.Name = "txtCustomerID";
+            this.txtCustomerID.ReadOnly = true;
             this.txtCustomerID.Size = new System.Drawing.Size(164, 20);
             this.txtCustomerID.TabIndex = 15;
-            this.txtCustomerID.TextChanged += new System.EventHandler(this.txtCustomerID_TextChanged);
             // 
             // lblCustomerID
             // 
             this.lblCustomerID.AutoSize = true;
-            this.lblCustomerID.Location = new System.Drawing.Point(66, 85);
+            this.lblCustomerID.Location = new System.Drawing.Point(66, 174);
             this.lblCustomerID.Name = "lblCustomerID";
             this.lblCustomerID.Size = new System.Drawing.Size(62, 13);
             this.lblCustomerID.TabIndex = 14;
             this.lblCustomerID.Text = "CustomerID";
-            this.lblCustomerID.Click += new System.EventHandler(this.lblCustomerID_Click);
             // 
             // lblTitle
             // 
@@ -153,31 +149,39 @@
             this.lblTitle.Size = new System.Drawing.Size(322, 25);
             this.lblTitle.TabIndex = 13;
             this.lblTitle.Text = "Receive Transaction Information";
-            this.lblTitle.Click += new System.EventHandler(this.lblTitle_Click);
             // 
             // txtTransID
             // 
-            this.txtTransID.Location = new System.Drawing.Point(134, 270);
+            this.txtTransID.Location = new System.Drawing.Point(134, 76);
             this.txtTransID.Name = "txtTransID";
             this.txtTransID.Size = new System.Drawing.Size(164, 20);
             this.txtTransID.TabIndex = 27;
-            this.txtTransID.TextChanged += new System.EventHandler(this.txtTransID_TextChanged);
             // 
             // lblTransactionID
             // 
             this.lblTransactionID.AutoSize = true;
-            this.lblTransactionID.Location = new System.Drawing.Point(47, 273);
+            this.lblTransactionID.Location = new System.Drawing.Point(47, 79);
             this.lblTransactionID.Name = "lblTransactionID";
             this.lblTransactionID.Size = new System.Drawing.Size(77, 13);
             this.lblTransactionID.TabIndex = 26;
             this.lblTransactionID.Text = "Transaction ID";
-            this.lblTransactionID.Click += new System.EventHandler(this.lblTransactionID_Click);
+            // 
+            // btnGetInfo
+            // 
+            this.btnGetInfo.Location = new System.Drawing.Point(137, 114);
+            this.btnGetInfo.Name = "btnGetInfo";
+            this.btnGetInfo.Size = new System.Drawing.Size(99, 37);
+            this.btnGetInfo.TabIndex = 28;
+            this.btnGetInfo.Text = "Receive Info";
+            this.btnGetInfo.UseVisualStyleBackColor = true;
+            this.btnGetInfo.Click += new System.EventHandler(this.btnGetInfo_Click);
             // 
             // RequestTransInfo
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(354, 372);
+            this.ClientSize = new System.Drawing.Size(354, 425);
+            this.Controls.Add(this.btnGetInfo);
             this.Controls.Add(this.txtTransID);
             this.Controls.Add(this.lblTransactionID);
             this.Controls.Add(this.btnBack);
@@ -215,5 +219,6 @@
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.TextBox txtTransID;
         private System.Windows.Forms.Label lblTransactionID;
+        private System.Windows.Forms.Button btnGetInfo;
     }
 }
