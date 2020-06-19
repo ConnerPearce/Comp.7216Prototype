@@ -29,10 +29,6 @@
         private void InitializeComponent()
         {
             this.lblTitle = new System.Windows.Forms.Label();
-            this.lblCustomerID = new System.Windows.Forms.Label();
-            this.txtCustomerID = new System.Windows.Forms.TextBox();
-            this.txtDateCreated = new System.Windows.Forms.TextBox();
-            this.lblDateCreated = new System.Windows.Forms.Label();
             this.txtPaymentAmount = new System.Windows.Forms.TextBox();
             this.lblPaymentAmount = new System.Windows.Forms.Label();
             this.txtItemPurchased = new System.Windows.Forms.TextBox();
@@ -53,41 +49,9 @@
             this.lblTitle.TabIndex = 0;
             this.lblTitle.Text = "Create Transaction Information";
             // 
-            // lblCustomerID
-            // 
-            this.lblCustomerID.AutoSize = true;
-            this.lblCustomerID.Location = new System.Drawing.Point(69, 80);
-            this.lblCustomerID.Name = "lblCustomerID";
-            this.lblCustomerID.Size = new System.Drawing.Size(62, 13);
-            this.lblCustomerID.TabIndex = 1;
-            this.lblCustomerID.Text = "CustomerID";
-            // 
-            // txtCustomerID
-            // 
-            this.txtCustomerID.Location = new System.Drawing.Point(137, 77);
-            this.txtCustomerID.Name = "txtCustomerID";
-            this.txtCustomerID.Size = new System.Drawing.Size(164, 20);
-            this.txtCustomerID.TabIndex = 2;
-            // 
-            // txtDateCreated
-            // 
-            this.txtDateCreated.Location = new System.Drawing.Point(137, 114);
-            this.txtDateCreated.Name = "txtDateCreated";
-            this.txtDateCreated.Size = new System.Drawing.Size(164, 20);
-            this.txtDateCreated.TabIndex = 4;
-            // 
-            // lblDateCreated
-            // 
-            this.lblDateCreated.AutoSize = true;
-            this.lblDateCreated.Location = new System.Drawing.Point(61, 117);
-            this.lblDateCreated.Name = "lblDateCreated";
-            this.lblDateCreated.Size = new System.Drawing.Size(70, 13);
-            this.lblDateCreated.TabIndex = 3;
-            this.lblDateCreated.Text = "Date Created";
-            // 
             // txtPaymentAmount
             // 
-            this.txtPaymentAmount.Location = new System.Drawing.Point(137, 189);
+            this.txtPaymentAmount.Location = new System.Drawing.Point(137, 109);
             this.txtPaymentAmount.Name = "txtPaymentAmount";
             this.txtPaymentAmount.Size = new System.Drawing.Size(164, 20);
             this.txtPaymentAmount.TabIndex = 8;
@@ -95,7 +59,7 @@
             // lblPaymentAmount
             // 
             this.lblPaymentAmount.AutoSize = true;
-            this.lblPaymentAmount.Location = new System.Drawing.Point(44, 192);
+            this.lblPaymentAmount.Location = new System.Drawing.Point(44, 112);
             this.lblPaymentAmount.Name = "lblPaymentAmount";
             this.lblPaymentAmount.Size = new System.Drawing.Size(87, 13);
             this.lblPaymentAmount.TabIndex = 7;
@@ -103,7 +67,7 @@
             // 
             // txtItemPurchased
             // 
-            this.txtItemPurchased.Location = new System.Drawing.Point(137, 152);
+            this.txtItemPurchased.Location = new System.Drawing.Point(137, 72);
             this.txtItemPurchased.Name = "txtItemPurchased";
             this.txtItemPurchased.Size = new System.Drawing.Size(164, 20);
             this.txtItemPurchased.TabIndex = 6;
@@ -111,7 +75,7 @@
             // lblItemPurchased
             // 
             this.lblItemPurchased.AutoSize = true;
-            this.lblItemPurchased.Location = new System.Drawing.Point(50, 155);
+            this.lblItemPurchased.Location = new System.Drawing.Point(50, 75);
             this.lblItemPurchased.Name = "lblItemPurchased";
             this.lblItemPurchased.Size = new System.Drawing.Size(81, 13);
             this.lblItemPurchased.TabIndex = 5;
@@ -119,7 +83,7 @@
             // 
             // txtPaymentType
             // 
-            this.txtPaymentType.Location = new System.Drawing.Point(137, 225);
+            this.txtPaymentType.Location = new System.Drawing.Point(137, 145);
             this.txtPaymentType.Name = "txtPaymentType";
             this.txtPaymentType.Size = new System.Drawing.Size(164, 20);
             this.txtPaymentType.TabIndex = 10;
@@ -127,7 +91,7 @@
             // lblPaymentType
             // 
             this.lblPaymentType.AutoSize = true;
-            this.lblPaymentType.Location = new System.Drawing.Point(50, 228);
+            this.lblPaymentType.Location = new System.Drawing.Point(50, 148);
             this.lblPaymentType.Name = "lblPaymentType";
             this.lblPaymentType.Size = new System.Drawing.Size(75, 13);
             this.lblPaymentType.TabIndex = 9;
@@ -135,16 +99,17 @@
             // 
             // btnSubmit
             // 
-            this.btnSubmit.Location = new System.Drawing.Point(184, 270);
+            this.btnSubmit.Location = new System.Drawing.Point(184, 190);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(99, 43);
             this.btnSubmit.TabIndex = 11;
             this.btnSubmit.Text = "Submit";
             this.btnSubmit.UseVisualStyleBackColor = true;
+            this.btnSubmit.Click += new System.EventHandler(this.btnSubmit_Click);
             // 
             // btnBack
             // 
-            this.btnBack.Location = new System.Drawing.Point(83, 274);
+            this.btnBack.Location = new System.Drawing.Point(83, 194);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(78, 34);
             this.btnBack.TabIndex = 12;
@@ -156,7 +121,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(360, 342);
+            this.ClientSize = new System.Drawing.Size(360, 258);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.btnSubmit);
             this.Controls.Add(this.txtPaymentType);
@@ -165,10 +130,6 @@
             this.Controls.Add(this.lblPaymentAmount);
             this.Controls.Add(this.txtItemPurchased);
             this.Controls.Add(this.lblItemPurchased);
-            this.Controls.Add(this.txtDateCreated);
-            this.Controls.Add(this.lblDateCreated);
-            this.Controls.Add(this.txtCustomerID);
-            this.Controls.Add(this.lblCustomerID);
             this.Controls.Add(this.lblTitle);
             this.Name = "CreateTransInfo";
             this.Text = "CreateTransInfo";
@@ -180,10 +141,6 @@
         #endregion
 
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.Label lblCustomerID;
-        private System.Windows.Forms.TextBox txtCustomerID;
-        private System.Windows.Forms.TextBox txtDateCreated;
-        private System.Windows.Forms.Label lblDateCreated;
         private System.Windows.Forms.TextBox txtPaymentAmount;
         private System.Windows.Forms.Label lblPaymentAmount;
         private System.Windows.Forms.TextBox txtItemPurchased;
