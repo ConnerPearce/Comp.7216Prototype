@@ -31,7 +31,7 @@
             this.btnBack = new System.Windows.Forms.Button();
             this.lblCurrentLimit = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
-            this.txtCreateId = new System.Windows.Forms.TextBox();
+            this.txtUserId = new System.Windows.Forms.TextBox();
             this.lblSubtitle = new System.Windows.Forms.Label();
             this.btnDeletePayee = new System.Windows.Forms.Button();
             this.lblSubtitle2 = new System.Windows.Forms.Label();
@@ -66,12 +66,12 @@
             this.lblTitle.TabIndex = 5;
             this.lblTitle.Text = "Delete Payee Page";
             // 
-            // txtCreateId
+            // txtUserId
             // 
-            this.txtCreateId.Location = new System.Drawing.Point(136, 121);
-            this.txtCreateId.Name = "txtCreateId";
-            this.txtCreateId.Size = new System.Drawing.Size(100, 20);
-            this.txtCreateId.TabIndex = 5;
+            this.txtUserId.Location = new System.Drawing.Point(136, 121);
+            this.txtUserId.Name = "txtUserId";
+            this.txtUserId.Size = new System.Drawing.Size(100, 20);
+            this.txtUserId.TabIndex = 5;
             // 
             // lblSubtitle
             // 
@@ -118,7 +118,7 @@
             this.Controls.Add(this.btnDeletePayee);
             this.Controls.Add(this.lblSubtitle);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.txtCreateId);
+            this.Controls.Add(this.txtUserId);
             this.Controls.Add(this.lblCurrentLimit);
             this.Controls.Add(this.lblTitle);
             this.Name = "DeletePayee";
@@ -133,7 +133,7 @@
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblCurrentLimit;
         private System.Windows.Forms.Label lblTitle;
-        private System.Windows.Forms.TextBox txtCreateId;
+        private System.Windows.Forms.TextBox txtUserId;
         private System.Windows.Forms.Label lblSubtitle;
         private System.Windows.Forms.Button btnDeletePayee;
         private System.Windows.Forms.Label lblSubtitle2;

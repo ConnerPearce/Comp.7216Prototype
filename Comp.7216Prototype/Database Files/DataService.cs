@@ -125,12 +125,12 @@ namespace Comp._7216Prototype.Database_Files
 
         }
 
-        public async Task<bool> DeletePayeeAsync<T>(string payeeID, string uID)
+        public async Task<bool> DeletePayeeAsync<T>(string uID, string payeeID)
         {
             try
             {
                 var item = db.GetCollection<PayeeDetails>("PayeeDetails");
-                var filter = Builders<PayeeDetails>.Filter.Where(e => e.CustomerId == payeeID && e.UserId == uID);
+                var filter = Builders<PayeeDetails>.Filter.Where(e => e.UserId == uID && e.CustomerId == payeeID);
                 if (item == null)
                     return false;
 
