@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Comp._7216Prototype.Database_Files;
+using Comp._7216Prototype.Database_Files.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,8 @@ namespace Comp._7216Prototype.Payee_Page
 {
     public partial class UpdatePayee : Form
     {
+        private readonly string CollectionName = "PayeeDetails";
+
         public UpdatePayee()
         {
             InitializeComponent();
@@ -24,9 +28,24 @@ namespace Comp._7216Prototype.Payee_Page
             Hide();
         }
 
-        private void btnDeletePayee_Click(object sender, EventArgs e)
+        private async void btnDeletePayee_Click(object sender, EventArgs e)
         {
+            DataService dataService = new DataService();
 
+            if (!String.IsNullOrEmpty(txtId.Text) && !String.IsNullOrEmpty(txtCustomerId.Text) && !String.IsNullOrEmpty(txtUsername.Text))
+            {
+                var payee = await dataService.GetRecordByIdAsync<PayeeDetails>(CollectionName, txtId.Text);
+                payee.CustomerId = txtCustomerId.Text;
+                payee.UserName = txtUsername.Text;
+
+                bool success = await dataService.UpdateAsync(payee.id, payee, CollectionName);
+                if (success)
+                    MessageBox.Show("Payee Updated");
+                else
+                    MessageBox.Show("Payee unable to be updated");
+            }
+            else
+                MessageBox.Show("Please Enter a ID, UserID & Username");
         }
     }
 }

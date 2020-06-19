@@ -37,6 +37,9 @@
             this.lblSubtitle2 = new System.Windows.Forms.Label();
             this.txtUsername = new System.Windows.Forms.TextBox();
             this.lblSubtitle3 = new System.Windows.Forms.Label();
+            this.txtCustomerId = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
+            this.lblId = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnBack
@@ -52,7 +55,7 @@
             // lblCurrentLimit
             // 
             this.lblCurrentLimit.AutoSize = true;
-            this.lblCurrentLimit.Location = new System.Drawing.Point(144, 104);
+            this.lblCurrentLimit.Location = new System.Drawing.Point(146, 212);
             this.lblCurrentLimit.Name = "lblCurrentLimit";
             this.lblCurrentLimit.Size = new System.Drawing.Size(0, 13);
             this.lblCurrentLimit.TabIndex = 6;
@@ -69,7 +72,7 @@
             // 
             // btnRequestPayee
             // 
-            this.btnRequestPayee.Location = new System.Drawing.Point(57, 201);
+            this.btnRequestPayee.Location = new System.Drawing.Point(59, 152);
             this.btnRequestPayee.Name = "btnRequestPayee";
             this.btnRequestPayee.Size = new System.Drawing.Size(177, 34);
             this.btnRequestPayee.TabIndex = 4;
@@ -80,7 +83,7 @@
             // lblSubtitle
             // 
             this.lblSubtitle.AutoSize = true;
-            this.lblSubtitle.Location = new System.Drawing.Point(54, 107);
+            this.lblSubtitle.Location = new System.Drawing.Point(56, 235);
             this.lblSubtitle.Name = "lblSubtitle";
             this.lblSubtitle.Size = new System.Drawing.Size(43, 13);
             this.lblSubtitle.TabIndex = 9;
@@ -88,7 +91,7 @@
             // 
             // txtUserId
             // 
-            this.txtUserId.Location = new System.Drawing.Point(134, 104);
+            this.txtUserId.Location = new System.Drawing.Point(136, 228);
             this.txtUserId.Name = "txtUserId";
             this.txtUserId.Size = new System.Drawing.Size(100, 20);
             this.txtUserId.TabIndex = 8;
@@ -96,7 +99,7 @@
             // lblSubtitle2
             // 
             this.lblSubtitle2.AutoSize = true;
-            this.lblSubtitle2.Location = new System.Drawing.Point(42, 157);
+            this.lblSubtitle2.Location = new System.Drawing.Point(44, 261);
             this.lblSubtitle2.Name = "lblSubtitle2";
             this.lblSubtitle2.Size = new System.Drawing.Size(55, 13);
             this.lblSubtitle2.TabIndex = 11;
@@ -104,7 +107,7 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(134, 154);
+            this.txtUsername.Location = new System.Drawing.Point(136, 254);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(100, 20);
             this.txtUsername.TabIndex = 10;
@@ -112,18 +115,44 @@
             // lblSubtitle3
             // 
             this.lblSubtitle3.AutoSize = true;
-            this.lblSubtitle3.Location = new System.Drawing.Point(171, 133);
+            this.lblSubtitle3.Location = new System.Drawing.Point(34, 287);
             this.lblSubtitle3.Name = "lblSubtitle3";
-            this.lblSubtitle3.Size = new System.Drawing.Size(23, 13);
-            this.lblSubtitle3.TabIndex = 12;
-            this.lblSubtitle3.Text = "OR";
+            this.lblSubtitle3.Size = new System.Drawing.Size(65, 13);
+            this.lblSubtitle3.TabIndex = 13;
+            this.lblSubtitle3.Text = "Customer ID";
+            // 
+            // txtCustomerId
+            // 
+            this.txtCustomerId.Location = new System.Drawing.Point(136, 280);
+            this.txtCustomerId.Name = "txtCustomerId";
+            this.txtCustomerId.Size = new System.Drawing.Size(100, 20);
+            this.txtCustomerId.TabIndex = 12;
+            // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(108, 109);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(164, 20);
+            this.txtId.TabIndex = 30;
+            // 
+            // lblId
+            // 
+            this.lblId.AutoSize = true;
+            this.lblId.Location = new System.Drawing.Point(21, 112);
+            this.lblId.Name = "lblId";
+            this.lblId.Size = new System.Drawing.Size(77, 13);
+            this.lblId.TabIndex = 29;
+            this.lblId.Text = "Transaction ID";
             // 
             // RequestPayee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 266);
+            this.ClientSize = new System.Drawing.Size(284, 397);
+            this.Controls.Add(this.txtId);
+            this.Controls.Add(this.lblId);
             this.Controls.Add(this.lblSubtitle3);
+            this.Controls.Add(this.txtCustomerId);
             this.Controls.Add(this.lblSubtitle2);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.lblSubtitle);
@@ -150,5 +179,8 @@
         private System.Windows.Forms.Label lblSubtitle2;
         private System.Windows.Forms.TextBox txtUsername;
         private System.Windows.Forms.Label lblSubtitle3;
+        private System.Windows.Forms.TextBox txtCustomerId;
+        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Label lblId;
     }
 }

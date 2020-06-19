@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Comp._7216Prototype.Database_Files;
+using Comp._7216Prototype.Database_Files.Data;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -12,6 +14,8 @@ namespace Comp._7216Prototype.Payee_Page
 {
     public partial class RequestPayee : Form
     {
+        private readonly string CollectionName = "PayeeDetails";
+
         public RequestPayee()
         {
             InitializeComponent();
@@ -24,9 +28,20 @@ namespace Comp._7216Prototype.Payee_Page
             Hide();
         }
 
-        private void btnRequestPayee_Click(object sender, EventArgs e)
+        private async void btnRequestPayee_Click(object sender, EventArgs e)
         {
+            DataService dataService = new DataService();
 
+            if (!String.IsNullOrEmpty(txtId.Text))
+            {
+                var payee = await dataService.GetRecordByIdAsync<PayeeDetails>(CollectionName, txtId.Text);
+
+                txtUserId.Text = payee.UserId;
+                txtUsername.Text = payee.UserName;
+                txtCustomerId.Text = payee.CustomerId;
+            }
+            else
+                MessageBox.Show("Please Enter an ID");
         }
     }
 }

@@ -29,46 +29,48 @@
         private void InitializeComponent()
         {
             this.lblSubtitle2 = new System.Windows.Forms.Label();
-            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.txtCustomerId = new System.Windows.Forms.TextBox();
             this.lblSubtitle = new System.Windows.Forms.Label();
-            this.txtUserId = new System.Windows.Forms.TextBox();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.btnBack = new System.Windows.Forms.Button();
             this.lblCurrentLimit = new System.Windows.Forms.Label();
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnDeletePayee = new System.Windows.Forms.Button();
+            this.txtUsername = new System.Windows.Forms.TextBox();
+            this.lblSubtitle3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // lblSubtitle2
             // 
             this.lblSubtitle2.AutoSize = true;
-            this.lblSubtitle2.Location = new System.Drawing.Point(42, 133);
+            this.lblSubtitle2.Location = new System.Drawing.Point(44, 186);
             this.lblSubtitle2.Name = "lblSubtitle2";
             this.lblSubtitle2.Size = new System.Drawing.Size(55, 13);
             this.lblSubtitle2.TabIndex = 20;
             this.lblSubtitle2.Text = "Username";
             // 
-            // txtUsername
+            // txtCustomerId
             // 
-            this.txtUsername.Location = new System.Drawing.Point(134, 130);
-            this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(100, 20);
-            this.txtUsername.TabIndex = 19;
+            this.txtCustomerId.Location = new System.Drawing.Point(136, 153);
+            this.txtCustomerId.Name = "txtCustomerId";
+            this.txtCustomerId.Size = new System.Drawing.Size(127, 20);
+            this.txtCustomerId.TabIndex = 19;
             // 
             // lblSubtitle
             // 
             this.lblSubtitle.AutoSize = true;
-            this.lblSubtitle.Location = new System.Drawing.Point(54, 107);
+            this.lblSubtitle.Location = new System.Drawing.Point(34, 160);
             this.lblSubtitle.Name = "lblSubtitle";
-            this.lblSubtitle.Size = new System.Drawing.Size(43, 13);
+            this.lblSubtitle.Size = new System.Drawing.Size(65, 13);
             this.lblSubtitle.TabIndex = 18;
-            this.lblSubtitle.Text = "User ID";
+            this.lblSubtitle.Text = "Customer ID";
             // 
-            // txtUserId
+            // txtId
             // 
-            this.txtUserId.Location = new System.Drawing.Point(134, 104);
-            this.txtUserId.Name = "txtUserId";
-            this.txtUserId.Size = new System.Drawing.Size(100, 20);
-            this.txtUserId.TabIndex = 17;
+            this.txtId.Location = new System.Drawing.Point(136, 127);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(127, 20);
+            this.txtId.TabIndex = 17;
             // 
             // btnBack
             // 
@@ -83,7 +85,7 @@
             // lblCurrentLimit
             // 
             this.lblCurrentLimit.AutoSize = true;
-            this.lblCurrentLimit.Location = new System.Drawing.Point(144, 104);
+            this.lblCurrentLimit.Location = new System.Drawing.Point(146, 144);
             this.lblCurrentLimit.Name = "lblCurrentLimit";
             this.lblCurrentLimit.Size = new System.Drawing.Size(0, 13);
             this.lblCurrentLimit.TabIndex = 15;
@@ -100,7 +102,7 @@
             // 
             // btnDeletePayee
             // 
-            this.btnDeletePayee.Location = new System.Drawing.Point(57, 186);
+            this.btnDeletePayee.Location = new System.Drawing.Point(59, 218);
             this.btnDeletePayee.Name = "btnDeletePayee";
             this.btnDeletePayee.Size = new System.Drawing.Size(177, 34);
             this.btnDeletePayee.TabIndex = 21;
@@ -108,16 +110,34 @@
             this.btnDeletePayee.UseVisualStyleBackColor = true;
             this.btnDeletePayee.Click += new System.EventHandler(this.btnDeletePayee_Click);
             // 
+            // txtUsername
+            // 
+            this.txtUsername.Location = new System.Drawing.Point(136, 179);
+            this.txtUsername.Name = "txtUsername";
+            this.txtUsername.Size = new System.Drawing.Size(127, 20);
+            this.txtUsername.TabIndex = 22;
+            // 
+            // lblSubtitle3
+            // 
+            this.lblSubtitle3.AutoSize = true;
+            this.lblSubtitle3.Location = new System.Drawing.Point(81, 134);
+            this.lblSubtitle3.Name = "lblSubtitle3";
+            this.lblSubtitle3.Size = new System.Drawing.Size(18, 13);
+            this.lblSubtitle3.TabIndex = 23;
+            this.lblSubtitle3.Text = "ID";
+            // 
             // UpdatePayee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(276, 272);
+            this.ClientSize = new System.Drawing.Size(315, 363);
+            this.Controls.Add(this.lblSubtitle3);
+            this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.btnDeletePayee);
             this.Controls.Add(this.lblSubtitle2);
-            this.Controls.Add(this.txtUsername);
+            this.Controls.Add(this.txtCustomerId);
             this.Controls.Add(this.lblSubtitle);
-            this.Controls.Add(this.txtUserId);
+            this.Controls.Add(this.txtId);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblCurrentLimit);
             this.Controls.Add(this.lblTitle);
@@ -130,12 +150,14 @@
 
         #endregion
         private System.Windows.Forms.Label lblSubtitle2;
-        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.TextBox txtCustomerId;
         private System.Windows.Forms.Label lblSubtitle;
-        private System.Windows.Forms.TextBox txtUserId;
+        private System.Windows.Forms.TextBox txtId;
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblCurrentLimit;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button btnDeletePayee;
+        private System.Windows.Forms.TextBox txtUsername;
+        private System.Windows.Forms.Label lblSubtitle3;
     }
 }
