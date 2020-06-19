@@ -58,7 +58,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(96, 122);
+            this.label2.Location = new System.Drawing.Point(88, 140);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(66, 13);
             this.label2.TabIndex = 5;
@@ -66,10 +66,11 @@
             // 
             // txtUpdate
             // 
-            this.txtUpdate.Location = new System.Drawing.Point(168, 119);
+            this.txtUpdate.Location = new System.Drawing.Point(160, 140);
             this.txtUpdate.Name = "txtUpdate";
             this.txtUpdate.Size = new System.Drawing.Size(100, 20);
             this.txtUpdate.TabIndex = 4;
+            this.txtUpdate.Text = "``````";
             // 
             // btnUpdateLimit
             // 
