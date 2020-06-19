@@ -69,7 +69,7 @@
             // btnClearAll
             // 
             this.btnClearAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnClearAll.Location = new System.Drawing.Point(198, 489);
+            this.btnClearAll.Location = new System.Drawing.Point(186, 489);
             this.btnClearAll.Name = "btnClearAll";
             this.btnClearAll.Size = new System.Drawing.Size(82, 34);
             this.btnClearAll.TabIndex = 33;
@@ -80,7 +80,7 @@
             // btnSubmit
             // 
             this.btnSubmit.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnSubmit.Location = new System.Drawing.Point(294, 489);
+            this.btnSubmit.Location = new System.Drawing.Point(304, 489);
             this.btnSubmit.Name = "btnSubmit";
             this.btnSubmit.Size = new System.Drawing.Size(82, 34);
             this.btnSubmit.TabIndex = 32;
@@ -102,7 +102,7 @@
             // 
             this.lblTransaction.AutoSize = true;
             this.lblTransaction.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblTransaction.Location = new System.Drawing.Point(195, 430);
+            this.lblTransaction.Location = new System.Drawing.Point(183, 430);
             this.lblTransaction.Name = "lblTransaction";
             this.lblTransaction.Size = new System.Drawing.Size(100, 17);
             this.lblTransaction.TabIndex = 30;
@@ -112,7 +112,7 @@
             // 
             this.lblTransfer.AutoSize = true;
             this.lblTransfer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblTransfer.Location = new System.Drawing.Point(195, 371);
+            this.lblTransfer.Location = new System.Drawing.Point(183, 371);
             this.lblTransfer.Name = "lblTransfer";
             this.lblTransfer.Size = new System.Drawing.Size(79, 17);
             this.lblTransfer.TabIndex = 29;
@@ -122,7 +122,7 @@
             // 
             this.lblPayment.AutoSize = true;
             this.lblPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblPayment.Location = new System.Drawing.Point(195, 317);
+            this.lblPayment.Location = new System.Drawing.Point(183, 317);
             this.lblPayment.Name = "lblPayment";
             this.lblPayment.Size = new System.Drawing.Size(80, 17);
             this.lblPayment.TabIndex = 28;
@@ -132,7 +132,7 @@
             // 
             this.lblCustomer.AutoSize = true;
             this.lblCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblCustomer.Location = new System.Drawing.Point(195, 260);
+            this.lblCustomer.Location = new System.Drawing.Point(183, 260);
             this.lblCustomer.Name = "lblCustomer";
             this.lblCustomer.Size = new System.Drawing.Size(85, 17);
             this.lblCustomer.TabIndex = 27;
@@ -141,40 +141,40 @@
             // txtTransaction
             // 
             this.txtTransaction.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtTransaction.Location = new System.Drawing.Point(198, 450);
+            this.txtTransaction.Location = new System.Drawing.Point(186, 450);
             this.txtTransaction.Name = "txtTransaction";
-            this.txtTransaction.Size = new System.Drawing.Size(178, 23);
+            this.txtTransaction.Size = new System.Drawing.Size(200, 23);
             this.txtTransaction.TabIndex = 26;
             // 
             // txtTransfer
             // 
             this.txtTransfer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtTransfer.Location = new System.Drawing.Point(198, 391);
+            this.txtTransfer.Location = new System.Drawing.Point(186, 391);
             this.txtTransfer.Name = "txtTransfer";
-            this.txtTransfer.Size = new System.Drawing.Size(178, 23);
+            this.txtTransfer.Size = new System.Drawing.Size(200, 23);
             this.txtTransfer.TabIndex = 25;
             // 
             // txtPayment
             // 
             this.txtPayment.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtPayment.Location = new System.Drawing.Point(198, 337);
+            this.txtPayment.Location = new System.Drawing.Point(186, 337);
             this.txtPayment.Name = "txtPayment";
-            this.txtPayment.Size = new System.Drawing.Size(178, 23);
+            this.txtPayment.Size = new System.Drawing.Size(200, 23);
             this.txtPayment.TabIndex = 24;
             // 
             // txtCustomer
             // 
             this.txtCustomer.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtCustomer.Location = new System.Drawing.Point(198, 280);
+            this.txtCustomer.Location = new System.Drawing.Point(186, 280);
             this.txtCustomer.Name = "txtCustomer";
-            this.txtCustomer.Size = new System.Drawing.Size(178, 23);
+            this.txtCustomer.Size = new System.Drawing.Size(200, 23);
             this.txtCustomer.TabIndex = 23;
             // 
             // lblRecord
             // 
             this.lblRecord.AutoSize = true;
             this.lblRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.lblRecord.Location = new System.Drawing.Point(195, 141);
+            this.lblRecord.Location = new System.Drawing.Point(183, 141);
             this.lblRecord.Name = "lblRecord";
             this.lblRecord.Size = new System.Drawing.Size(71, 17);
             this.lblRecord.TabIndex = 36;
@@ -183,15 +183,15 @@
             // txtRecord
             // 
             this.txtRecord.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.txtRecord.Location = new System.Drawing.Point(198, 161);
+            this.txtRecord.Location = new System.Drawing.Point(186, 161);
             this.txtRecord.Name = "txtRecord";
-            this.txtRecord.Size = new System.Drawing.Size(178, 23);
+            this.txtRecord.Size = new System.Drawing.Size(200, 23);
             this.txtRecord.TabIndex = 22;
             // 
             // picClearRecord
             // 
             this.picClearRecord.Image = global::Comp._7216Prototype.Properties.Resources.icons8_cancel_96;
-            this.picClearRecord.Location = new System.Drawing.Point(382, 161);
+            this.picClearRecord.Location = new System.Drawing.Point(392, 161);
             this.picClearRecord.Name = "picClearRecord";
             this.picClearRecord.Size = new System.Drawing.Size(23, 23);
             this.picClearRecord.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -202,7 +202,7 @@
             // picClearCustomer
             // 
             this.picClearCustomer.Image = global::Comp._7216Prototype.Properties.Resources.icons8_cancel_96;
-            this.picClearCustomer.Location = new System.Drawing.Point(382, 280);
+            this.picClearCustomer.Location = new System.Drawing.Point(392, 280);
             this.picClearCustomer.Name = "picClearCustomer";
             this.picClearCustomer.Size = new System.Drawing.Size(23, 23);
             this.picClearCustomer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -213,7 +213,7 @@
             // picClearPayment
             // 
             this.picClearPayment.Image = global::Comp._7216Prototype.Properties.Resources.icons8_cancel_96;
-            this.picClearPayment.Location = new System.Drawing.Point(382, 337);
+            this.picClearPayment.Location = new System.Drawing.Point(392, 337);
             this.picClearPayment.Name = "picClearPayment";
             this.picClearPayment.Size = new System.Drawing.Size(23, 23);
             this.picClearPayment.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -224,7 +224,7 @@
             // picClearTransfer
             // 
             this.picClearTransfer.Image = global::Comp._7216Prototype.Properties.Resources.icons8_cancel_96;
-            this.picClearTransfer.Location = new System.Drawing.Point(382, 391);
+            this.picClearTransfer.Location = new System.Drawing.Point(392, 391);
             this.picClearTransfer.Name = "picClearTransfer";
             this.picClearTransfer.Size = new System.Drawing.Size(23, 23);
             this.picClearTransfer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -235,7 +235,7 @@
             // picClearTransaction
             // 
             this.picClearTransaction.Image = global::Comp._7216Prototype.Properties.Resources.icons8_cancel_96;
-            this.picClearTransaction.Location = new System.Drawing.Point(382, 450);
+            this.picClearTransaction.Location = new System.Drawing.Point(392, 450);
             this.picClearTransaction.Name = "picClearTransaction";
             this.picClearTransaction.Size = new System.Drawing.Size(23, 23);
             this.picClearTransaction.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -246,7 +246,7 @@
             // btnSearch
             // 
             this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F);
-            this.btnSearch.Location = new System.Drawing.Point(294, 190);
+            this.btnSearch.Location = new System.Drawing.Point(304, 190);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(82, 34);
             this.btnSearch.TabIndex = 42;
