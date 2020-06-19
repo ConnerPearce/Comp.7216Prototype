@@ -23,20 +23,38 @@ namespace Comp._7216Prototype.Database_Files
         // Gets a record by id
         public async Task<T> GetRecordByIdAsync<T>(string collection, string id)
         {
-            var itemId = new ObjectId(id);
-            var item = db.GetCollection<T>(collection);
-            var filter = Builders<T>.Filter.Eq("_id", itemId);
+            try
+            {
+                var itemId = new ObjectId(id);
+                var item = db.GetCollection<T>(collection);
+                var filter = Builders<T>.Filter.Eq("_id", itemId);
 
-            return await item.Find(filter).FirstOrDefaultAsync();
+                return await item.Find(filter).FirstOrDefaultAsync();
+            }
+            catch
+            {
+
+                return default;
+            }
+
         }
 
         // Gets multiple items by foreign key ID
         public async Task<IEnumerable<T>> GetMultipleByID<T>(string id, string collection, string foreignKey)
         {
-            var items = db.GetCollection<T>(collection);
-            var filter = Builders<T>.Filter.Eq(foreignKey, id);
+            try
+            {
+                var items = db.GetCollection<T>(collection);
+                var filter = Builders<T>.Filter.Eq(foreignKey, id);
 
-            return await items.Find(filter).ToListAsync();
+                return await items.Find(filter).ToListAsync();
+            }
+            catch (Exception)
+            {
+
+                return null;
+            }
+
         }
 
         // UPDATE METHODS //
@@ -44,16 +62,25 @@ namespace Comp._7216Prototype.Database_Files
         // Updates a record by ID
         public async Task<bool> UpdateAsync<T>(string id, T item, string collection)
         {
-            var itemId = new ObjectId(id);
-            var temp = db.GetCollection<T>(collection);
-            var filter = Builders<T>.Filter.Eq("_id", itemId);
-            var result = await temp.ReplaceOneAsync(
-                filter,
-                item,
-                new ReplaceOptions { IsUpsert = true }
-                );
+            try
+            {
+                var itemId = new ObjectId(id);
+                var temp = db.GetCollection<T>(collection);
+                var filter = Builders<T>.Filter.Eq("_id", itemId);
+                var result = await temp.ReplaceOneAsync(
+                    filter,
+                    item,
+                    new ReplaceOptions { IsUpsert = true }
+                    );
 
-            return result.IsAcknowledged && result.ModifiedCount > 0;
+                return result.IsAcknowledged && result.ModifiedCount > 0;
+            }
+            catch
+            {
+
+                return false;
+            }
+
         }
 
         // CREATE METHODS //
@@ -61,8 +88,15 @@ namespace Comp._7216Prototype.Database_Files
         // Inserts a new record
         public async Task InsertAsync<T>(T item, string collection)
         {
-            var temp = db.GetCollection<T>(collection);
-            await temp.InsertOneAsync(item);
+            try
+            {
+                var temp = db.GetCollection<T>(collection);
+                await temp.InsertOneAsync(item);
+            }
+            catch
+            {
+                return;
+            }
         }
 
         // DELETE METHODS //
@@ -70,16 +104,24 @@ namespace Comp._7216Prototype.Database_Files
         // Deletes a record by id
         public async Task<bool> DeleteAsync<T>(string id, string collection)
         {
-            var itemId = new ObjectId(id);
-            var item = db.GetCollection<T>(collection);
-            var filter = Builders<T>.Filter.Eq("_id", itemId);
+            try
+            {
+                var itemId = new ObjectId(id);
+                var item = db.GetCollection<T>(collection);
+                var filter = Builders<T>.Filter.Eq("_id", itemId);
 
-            if (item == null)
+                if (item == null)
+                    return false;
+
+                var result = await item.DeleteOneAsync(filter);
+
+                return result.IsAcknowledged && result.DeletedCount > 0;
+            }
+            catch
+            {
                 return false;
+            }
 
-            var result = await item.DeleteOneAsync(filter);
-
-            return result.IsAcknowledged && result.DeletedCount > 0;
         }
 
     }
