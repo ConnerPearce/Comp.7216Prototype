@@ -119,7 +119,6 @@ namespace Comp._7216Prototype.Record_Page
         }
 
 
-
         //METHODS
 
         private string CheckTextBoxes(string record, string customer, string payment, string transfer, string transaction)//validate all textboxes in Creat a Record page
