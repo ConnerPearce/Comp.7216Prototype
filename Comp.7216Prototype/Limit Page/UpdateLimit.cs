@@ -14,6 +14,8 @@ namespace Comp._7216Prototype.Limit_Page
 {
     public partial class UpdateLimit : Form
     {
+        private readonly string CollectionName = "LimitRecord";
+
         public UpdateLimit()
         {
             InitializeComponent();
@@ -30,22 +32,22 @@ namespace Comp._7216Prototype.Limit_Page
         {
             DataService dataService = new DataService();
 
-            if (string.IsNullOrEmpty(txtLimitID.Text) || string.IsNullOrEmpty(txtUpdate.Text))
-                MessageBox.Show("Please fill in all fields");
-            else
+            if (!string.IsNullOrEmpty(txtLimitID.Text) && !string.IsNullOrEmpty(txtUpdate.Text))
             {
                 int i;
                 if (int.TryParse(txtUpdate.Text, out i))
                 {
-                    bool success = await dataService.UpdateAsync(txtLimitID.Text, new LimitRecord()
-                    {
-                        Limit =i
-                }, "LimitRecord");
+                    var record = await dataService.GetRecordByIdAsync<LimitRecord>(CollectionName, txtLimitID.Text);
+
+                    record.Limit = i;
+
+                    bool success = await dataService.UpdateAsync(txtLimitID.Text, record, CollectionName);
                 }
                 else
                     MessageBox.Show("The Limit has to be a int");
-
             }
+            else
+                MessageBox.Show("Please fill in all fields");
 
         }
     }
