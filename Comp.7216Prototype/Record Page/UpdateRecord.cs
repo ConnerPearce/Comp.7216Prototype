@@ -7,6 +7,7 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -70,7 +71,7 @@ namespace Comp._7216Prototype.Record_Page
             string outcome = CheckTextBoxes(txtRecord.Text, txtCustomer.Text, txtPayment.Text, txtTransfer.Text, txtTransaction.Text);
             if (outcome != "success")
             {
-                SendErrorMessage(outcome);
+                MessageBox.Show($"{outcome} ID is required", "Detected Empty Textboxes");
             }
             else
             {
@@ -83,9 +84,9 @@ namespace Comp._7216Prototype.Record_Page
                 bool result = await dataService.UpdateAsync(txtRecord.Text, record, CollectionName);
 
                 if (!result)
-                    SendUpdateFailed();
+                    MessageBox.Show("Unable to Update please check if your Record ID is correct", "Update FAILED");
                 else
-                    SendUpdateSuccess();
+                    MessageBox.Show("Update has been made", "Update Successful");
 
                 ClearAllTextboxes();
             }
@@ -94,15 +95,25 @@ namespace Comp._7216Prototype.Record_Page
 
         private async void btnSearch_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrEmpty(txtRecord.Text))
+            if (string.IsNullOrEmpty(txtRecord.Text))
             {
-                SendErrorMessage("Record");
+                MessageBox.Show($"Record ID is required", "Detected Empty Textbox");
             }
             else
             {
-
-                var result = await dataService.GetRecordByIdAsync<RecordManagement>(CollectionName, txtRecord.Text);
-
+                var record = await dataService.GetRecordByIdAsync<RecordManagement>(CollectionName, txtRecord.Text);
+                if (record == default)
+                {
+                    MessageBox.Show("Cannot find record. Please try another Record ID", "Search Failed");
+                }
+                else
+                {
+                    MessageBox.Show("Record has been found", "Search Successful");
+                    txtCustomer.Text = record.CustomerID;
+                    txtPayment.Text = record.PaymentID;
+                    txtTransfer.Text = record.TransferID;
+                    txtTransaction.Text = record.TransactionID;
+                }
             }
             
         }
@@ -110,29 +121,6 @@ namespace Comp._7216Prototype.Record_Page
 
 
         //METHODS
-        private void SendUpdateFailed()
-        {
-            string message = "Unable to Update please check if your Record ID is correct";
-            string caption = "Update FAILED";
-
-            MessageBox.Show(message, caption);
-        }
-        
-        private void SendUpdateSuccess()
-        {
-            string message = "Update has been made";
-            string caption = "Update Successful";
-
-            MessageBox.Show(message, caption);
-        }
-
-        private void SendErrorMessage(string outcome)
-        {
-            string message = $"{outcome} textbox is required";
-            string caption = "Detected Empty Textboxes";
-
-            MessageBox.Show(message, caption);//display a message to the admin that there is a textbox is null/empty
-        }
 
         private string CheckTextBoxes(string record, string customer, string payment, string transfer, string transaction)//validate all textboxes in Creat a Record page
         {
