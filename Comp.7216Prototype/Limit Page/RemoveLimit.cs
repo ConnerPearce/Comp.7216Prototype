@@ -26,7 +26,7 @@ namespace Comp._7216Prototype.Limit_Page
         {
             DataService dataService = new DataService();
 
-            if (string.IsNullOrEmpty(txtID.Text))
+            if (!string.IsNullOrEmpty(txtID.Text))
             {
                 bool success = await dataService.DeleteAsync<LimitRecord>(txtID.Text, CollectionName);
                 if (success)
