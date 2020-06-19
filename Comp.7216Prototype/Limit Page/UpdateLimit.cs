@@ -1,4 +1,5 @@
 ﻿using Comp._7216Prototype.Database_Files;
+using Comp._7216Prototype.Database_Files.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -25,10 +26,26 @@ namespace Comp._7216Prototype.Limit_Page
             Hide();
         }
 
-        private void btnUpdateLimit_Click(object sender, EventArgs e)
+        private async void btnUpdateLimit_Click(object sender, EventArgs e)
         {
             DataService dataService = new DataService();
 
+            if (string.IsNullOrEmpty(txtLimitID.Text) || string.IsNullOrEmpty(txtUpdate.Text))
+                MessageBox.Show("Please fill in all fields");
+            else
+            {
+                int i;
+                if (int.TryParse(txtUpdate.Text, out i))
+                {
+                    bool success = await dataService.UpdateAsync(txtLimitID.Text, new LimitRecord()
+                    {
+                        Limit =i
+                }, "LimitRecord");
+                }
+                else
+                    MessageBox.Show("The Limit has to be a int");
+
+            }
 
         }
     }
