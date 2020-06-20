@@ -28,21 +28,27 @@ namespace Comp._7216Prototype.Payee_Page
             Hide();
         }
 
-        private async void btnDeletePayee_Click(object sender, EventArgs e)
+        private async void btnUpdatePayee_Click(object sender, EventArgs e)
         {
             DataService dataService = new DataService();
 
             if (!String.IsNullOrEmpty(txtId.Text) && !String.IsNullOrEmpty(txtCustomerId.Text) && !String.IsNullOrEmpty(txtUsername.Text))
             {
                 var payee = await dataService.GetRecordByIdAsync<PayeeDetails>(CollectionName, txtId.Text);
-                payee.CustomerId = txtCustomerId.Text;
-                payee.UserName = txtUsername.Text;
 
-                bool success = await dataService.UpdateAsync(payee.id, payee, CollectionName);
-                if (success)
-                    MessageBox.Show("Payee Updated");
+                if (payee != default)
+                {
+                    payee.CustomerId = txtCustomerId.Text;
+                    payee.UserName = txtUsername.Text;
+
+                    bool success = await dataService.UpdateAsync(payee.id, payee, CollectionName);
+                    if (success)
+                        MessageBox.Show("Payee Updated");
+                    else
+                        MessageBox.Show("Payee unable to be updated");
+                }
                 else
-                    MessageBox.Show("Payee unable to be updated");
+                    MessageBox.Show("Payee does not exist");
             }
             else
                 MessageBox.Show("Please Enter a ID, UserID & Username");

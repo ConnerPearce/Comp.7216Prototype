@@ -36,9 +36,14 @@ namespace Comp._7216Prototype.Payee_Page
             {
                 var payee = await dataService.GetRecordByIdAsync<PayeeDetails>(CollectionName, txtId.Text);
 
-                txtUserId.Text = payee.UserId;
-                txtUsername.Text = payee.UserName;
-                txtCustomerId.Text = payee.CustomerId;
+                if (payee != default)
+                {
+                    txtUserId.Text = payee.UserId;
+                    txtUsername.Text = payee.UserName;
+                    txtCustomerId.Text = payee.CustomerId;
+                }
+                else
+                    MessageBox.Show("Payee does not exist");
             }
             else
                 MessageBox.Show("Please Enter an ID");
