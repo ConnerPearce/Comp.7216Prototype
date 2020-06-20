@@ -90,7 +90,6 @@ namespace Comp._7216Prototype.Record_Page
 
                 ClearAllTextboxes();
             }
-            
         }
 
         private async void btnSearch_Click(object sender, EventArgs e)
@@ -115,9 +114,7 @@ namespace Comp._7216Prototype.Record_Page
                     txtTransaction.Text = record.TransactionID;
                 }
             }
-            
         }
-
 
         //METHODS
 
@@ -156,8 +153,6 @@ namespace Comp._7216Prototype.Record_Page
             txtTransaction.Clear();
 
             txtCustomer.Focus();
-        }
-
-        
+        }  
     }
 }

@@ -45,14 +45,11 @@ namespace Comp._7216Prototype.Record_Page
             else
             {
                 bool outcome = await dataService.DeleteAsync<RecordManagement>(txtRecord.Text, CollectionName);
+
                 if (!outcome)
-                {
                     MessageBox.Show($"Record does not exist or cannot be found, try another Record ID", "Record Non-existent");
-                }
                 else
-                {
                     MessageBox.Show($"Record has been deleted. Have a wonderful day", "Record Deleted");
-                }
             }
         }
     }

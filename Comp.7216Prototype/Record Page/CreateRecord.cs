@@ -63,11 +63,11 @@ namespace Comp._7216Prototype.Record_Page
             //this is accessing record management class
             RecordManagement recordModel = new RecordManagement();
             //this will call the the validation method to check if any of the textboes are null or empty
-            var result = CheckTextBoxes(txtCustomer.Text, txtPayment.Text, txtTransfer.Text, txtTransaction.Text);
+            var outcome = CheckTextBoxes(txtCustomer.Text, txtPayment.Text, txtTransfer.Text, txtTransaction.Text);
 
-            if (result != "success")//if the result does not return a success string....
+            if (outcome != "success")//if the result does not return a success string....
             {
-                SendErrorMessage(result);//call the error message method
+                MessageBox.Show($"{outcome} textbox is required", "Detected Empty Textboxes");//display a message to the admin that there is a textbox is null/empty
             }
             else//otherwise
             {
@@ -80,25 +80,10 @@ namespace Comp._7216Prototype.Record_Page
                     TransactionID = txtTransaction.Text
                 }, CollectionName);
 
-                SendAddedMessage();//call the added message method
+                MessageBox.Show("Record has been saved to the database", "Insert Successful");//display a message to the admin that the record has been successfully sent 
+                
                 ClearAllTextboxes();//call the clear all textboxes method
             }
-        }
-
-        private void SendAddedMessage()
-        {
-            string message = "Record has been saved to the database";
-            string caption = "Insert Successful";
-
-            MessageBox.Show(message, caption);//display a message to the admin that the record has been successfully sent 
-        }
-
-        private void SendErrorMessage(string outcome)
-        {
-            string message = $"{outcome} textbox is required";
-            string caption = "Detected Empty Textboxes";
-
-            MessageBox.Show(message, caption);//display a message to the admin that there is a textbox is null/empty
         }
 
         private string CheckTextBoxes(string customer, string payment, string transfer, string transaction)//validate all textboxes in Creat a Record page
