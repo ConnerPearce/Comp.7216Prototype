@@ -77,7 +77,6 @@
             this.label4.Size = new System.Drawing.Size(140, 13);
             this.label4.TabIndex = 3;
             this.label4.Text = "Enter the transferrable credit";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // label5
             // 

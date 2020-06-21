@@ -38,7 +38,7 @@ namespace Comp._7216Prototype.Service_Home
 
         private async void transferaccountcredit_Click(object sender, EventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(textBox1.Text) && comboBox1.SelectedValue != null && !string.IsNullOrWhiteSpace(comboBox1.SelectedItem.ToString()))
+            if (!string.IsNullOrWhiteSpace(textBox1.Text) && comboBox1.SelectedItem != null && !string.IsNullOrWhiteSpace(comboBox1.SelectedItem.ToString()))
             {
                 DataService dataService = new DataService();
 
