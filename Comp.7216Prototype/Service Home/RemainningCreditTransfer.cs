@@ -94,5 +94,9 @@ namespace Comp._7216Prototype.Service_Home
                 MessageBox.Show("Fields can not be empty");
         }
 
+        private void RemainningCreditTransfer_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

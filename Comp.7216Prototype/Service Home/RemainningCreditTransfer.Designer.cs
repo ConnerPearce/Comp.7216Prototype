@@ -160,6 +160,7 @@
             this.Controls.Add(this.label1);
             this.Name = "RemainningCreditTransfer";
             this.Text = "RemainningCreditTransfer";
+            this.Load += new System.EventHandler(this.RemainningCreditTransfer_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

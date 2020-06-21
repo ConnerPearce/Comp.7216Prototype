@@ -14,9 +14,25 @@ namespace Comp._7216Prototype.Service_Home
 {
     public partial class AccountCreditTransfer : Form
     {
+        private DataService dataService = new DataService();
+        // Creating a variable to call the user anywhere
+        private UserTable user = new UserTable();
+
         public AccountCreditTransfer()
         {
             InitializeComponent();
+            PopulateList();
+        }
+        private async void PopulateList()
+        {
+            // Gets the user info from the database
+            user = await dataService.GetRecordByIdAsync<UserTable>("UserTable", "5ee40425021fde6dc4b56218");
+            if (user != null)
+            {
+                //Sets the labels if it finds a user
+                label3.Text = $"${user.AccountCredit}";
+                label4.Text = $"${user.AccountCredit}";
+            }
         }
 
         private void label3_Click(object sender, EventArgs e)
@@ -41,21 +57,49 @@ namespace Comp._7216Prototype.Service_Home
             if (!string.IsNullOrWhiteSpace(textBox1.Text) && comboBox1.SelectedItem != null && !string.IsNullOrWhiteSpace(comboBox1.SelectedItem.ToString()))
             {
                 DataService dataService = new DataService();
-
-                await dataService.InsertAsync(new TransferDetails()
+                double i;
+                // This checks that the text entered is actually a double/decimal
+                if (double.TryParse(textBox1.Text, out i))
                 {
-                    TransferAmount = textBox1.Text,
-                    TransferType = "Account Credit",
-                    Payed = true,
-                    PayeeID = "5ee40637021fde6dc4b5621d"
-                }, "TransferDetails");
+                    // Checks if the user has enough credit to make the transfer
+                    if (user.AccountCredit >= i)
+                    {
 
-                string message = "Account credits has been transfered";
-                string title = "Transfer Account Credit";
-                MessageBox.Show(message, title);
+                        await dataService.InsertAsync(new TransferDetails()
+                        {
+                            TransferAmount = textBox1.Text,
+                            TransferType = "Account Credit",
+                            Payed = true,
+                            PayeeID = "5ee40637021fde6dc4b5621d"
+                        }, "TransferDetails");
+
+
+                        // subtracts from the total remaining credits of the user
+                        user.AccountCredit -= i;
+                        await dataService.UpdateAsync(user.id, user, "UserTable");
+
+                        // gets the payee details
+                        var payee = await dataService.GetRecordByIdAsync<UserTable>("UserTable", "5ee40637021fde6dc4b5621d");
+                        // Adds the amount to the payees credit and updates it
+                        payee.AccountCredit += i;
+                        await dataService.UpdateAsync(payee.id, payee, "UserTable");
+
+                        string message = "Account credits has been transfered";
+                        string title = "Transfer Account Credit";
+                        MessageBox.Show(message, title);
+                    }
+                    else
+                        MessageBox.Show("Transfer amount cannot be more than Account credit");
+
+                }
+                else
+                    MessageBox.Show("Please enter a valid number");
+
             }
             else
-                MessageBox.Show("Fields can not be empty");
+            MessageBox.Show("Fields can not be empty");
+
+
 
         }
     }
