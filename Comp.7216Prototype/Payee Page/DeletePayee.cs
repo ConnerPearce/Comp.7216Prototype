@@ -36,7 +36,7 @@ namespace Comp._7216Prototype.Payee_Page
                 if (success)
                     MessageBox.Show("Payee Deleted");
                 else
-                    MessageBox.Show("Payee unable to be deleted");
+                    MessageBox.Show("Payee does not exist");
             }
             else
                 MessageBox.Show("Please Enter a UserID & CustomerID");

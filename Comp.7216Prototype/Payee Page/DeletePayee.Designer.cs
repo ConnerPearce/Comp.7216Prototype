@@ -60,7 +60,7 @@
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(54, 46);
+            this.lblTitle.Location = new System.Drawing.Point(131, 12);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(180, 25);
             this.lblTitle.TabIndex = 5;
@@ -70,7 +70,7 @@
             // 
             this.txtUserId.Location = new System.Drawing.Point(136, 121);
             this.txtUserId.Name = "txtUserId";
-            this.txtUserId.Size = new System.Drawing.Size(100, 20);
+            this.txtUserId.Size = new System.Drawing.Size(169, 20);
             this.txtUserId.TabIndex = 5;
             // 
             // lblSubtitle
@@ -84,9 +84,9 @@
             // 
             // btnDeletePayee
             // 
-            this.btnDeletePayee.Location = new System.Drawing.Point(57, 208);
+            this.btnDeletePayee.Location = new System.Drawing.Point(157, 184);
             this.btnDeletePayee.Name = "btnDeletePayee";
-            this.btnDeletePayee.Size = new System.Drawing.Size(177, 34);
+            this.btnDeletePayee.Size = new System.Drawing.Size(125, 27);
             this.btnDeletePayee.TabIndex = 8;
             this.btnDeletePayee.Text = "Delete Payee";
             this.btnDeletePayee.UseVisualStyleBackColor = true;
@@ -95,7 +95,7 @@
             // lblSubtitle2
             // 
             this.lblSubtitle2.AutoSize = true;
-            this.lblSubtitle2.Location = new System.Drawing.Point(24, 162);
+            this.lblSubtitle2.Location = new System.Drawing.Point(24, 150);
             this.lblSubtitle2.Name = "lblSubtitle2";
             this.lblSubtitle2.Size = new System.Drawing.Size(93, 13);
             this.lblSubtitle2.TabIndex = 10;
@@ -103,16 +103,16 @@
             // 
             // txtCustomerId
             // 
-            this.txtCustomerId.Location = new System.Drawing.Point(136, 159);
+            this.txtCustomerId.Location = new System.Drawing.Point(136, 147);
             this.txtCustomerId.Name = "txtCustomerId";
-            this.txtCustomerId.Size = new System.Drawing.Size(100, 20);
+            this.txtCustomerId.Size = new System.Drawing.Size(169, 20);
             this.txtCustomerId.TabIndex = 9;
             // 
             // DeletePayee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(295, 311);
+            this.ClientSize = new System.Drawing.Size(337, 273);
             this.Controls.Add(this.lblSubtitle2);
             this.Controls.Add(this.txtCustomerId);
             this.Controls.Add(this.btnDeletePayee);

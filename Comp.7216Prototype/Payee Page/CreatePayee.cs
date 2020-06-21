@@ -29,17 +29,18 @@ namespace Comp._7216Prototype.Payee_Page
             DataService dataService = new DataService();
 
             // Checks the text box and if its not empty it will run the code inside
-            if (!string.IsNullOrEmpty(txtCreateId.Text) && !string.IsNullOrEmpty(txtUsername.Text))
+            if (!string.IsNullOrEmpty(txtCustomerId.Text) && !string.IsNullOrEmpty(txtUsername.Text))
             {
                 // When you insert you need to create a new model of what you need and insert all the items on creation
                 // i.e for me since its to do with payee's the model i use is PayeeDetails
                 await dataService.InsertAsync(new PayeeDetails()
                 {
-                    CustomerId = txtCreateId.Text,
+                    CustomerId = txtCustomerId.Text,
                     UserName = txtUsername.Text,
+                    UserId = "5ee40425021fde6dc4b56218",
                 }, CollectioName); // Collection name is needed every time so that the DataService knows what table to insert data into
 
-                MessageBox.Show("Created"); // Just to show users the action has completed
+                MessageBox.Show("Payee Created"); // Just to show users the action has completed
             }
             else // If the text box is empty it will give an error (ERRORS ARE NEEDED)
                 MessageBox.Show("Please enter something");

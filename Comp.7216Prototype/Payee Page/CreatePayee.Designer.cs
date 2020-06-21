@@ -30,7 +30,7 @@
         {
             this.btnBack = new System.Windows.Forms.Button();
             this.lblSubtitle = new System.Windows.Forms.Label();
-            this.txtCreateId = new System.Windows.Forms.TextBox();
+            this.txtCustomerId = new System.Windows.Forms.TextBox();
             this.lblTitle = new System.Windows.Forms.Label();
             this.btnCreatePayee = new System.Windows.Forms.Button();
             this.lblSubtitle2 = new System.Windows.Forms.Label();
@@ -56,18 +56,18 @@
             this.lblSubtitle.TabIndex = 8;
             this.lblSubtitle.Text = "Enter Customer ID";
             // 
-            // txtCreateId
+            // txtCustomerId
             // 
-            this.txtCreateId.Location = new System.Drawing.Point(139, 113);
-            this.txtCreateId.Name = "txtCreateId";
-            this.txtCreateId.Size = new System.Drawing.Size(100, 20);
-            this.txtCreateId.TabIndex = 7;
+            this.txtCustomerId.Location = new System.Drawing.Point(126, 113);
+            this.txtCustomerId.Name = "txtCustomerId";
+            this.txtCustomerId.Size = new System.Drawing.Size(174, 20);
+            this.txtCustomerId.TabIndex = 7;
             // 
             // lblTitle
             // 
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTitle.Location = new System.Drawing.Point(93, 12);
+            this.lblTitle.Location = new System.Drawing.Point(121, 12);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(183, 25);
             this.lblTitle.TabIndex = 6;
@@ -75,9 +75,9 @@
             // 
             // btnCreatePayee
             // 
-            this.btnCreatePayee.Location = new System.Drawing.Point(64, 209);
+            this.btnCreatePayee.Location = new System.Drawing.Point(147, 176);
             this.btnCreatePayee.Name = "btnCreatePayee";
-            this.btnCreatePayee.Size = new System.Drawing.Size(162, 28);
+            this.btnCreatePayee.Size = new System.Drawing.Size(131, 28);
             this.btnCreatePayee.TabIndex = 5;
             this.btnCreatePayee.Text = "Create Payee";
             this.btnCreatePayee.UseVisualStyleBackColor = true;
@@ -86,7 +86,7 @@
             // lblSubtitle2
             // 
             this.lblSubtitle2.AutoSize = true;
-            this.lblSubtitle2.Location = new System.Drawing.Point(16, 152);
+            this.lblSubtitle2.Location = new System.Drawing.Point(21, 142);
             this.lblSubtitle2.Name = "lblSubtitle2";
             this.lblSubtitle2.Size = new System.Drawing.Size(88, 13);
             this.lblSubtitle2.TabIndex = 11;
@@ -94,21 +94,21 @@
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(139, 149);
+            this.txtUsername.Location = new System.Drawing.Point(126, 139);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(100, 20);
+            this.txtUsername.Size = new System.Drawing.Size(174, 20);
             this.txtUsername.TabIndex = 10;
             // 
             // CreatePayee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(293, 272);
+            this.ClientSize = new System.Drawing.Size(324, 272);
             this.Controls.Add(this.lblSubtitle2);
             this.Controls.Add(this.txtUsername);
             this.Controls.Add(this.btnBack);
             this.Controls.Add(this.lblSubtitle);
-            this.Controls.Add(this.txtCreateId);
+            this.Controls.Add(this.txtCustomerId);
             this.Controls.Add(this.lblTitle);
             this.Controls.Add(this.btnCreatePayee);
             this.Name = "CreatePayee";
@@ -122,7 +122,7 @@
 
         private System.Windows.Forms.Button btnBack;
         private System.Windows.Forms.Label lblSubtitle;
-        private System.Windows.Forms.TextBox txtCreateId;
+        private System.Windows.Forms.TextBox txtCustomerId;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Button btnCreatePayee;
         private System.Windows.Forms.Label lblSubtitle2;

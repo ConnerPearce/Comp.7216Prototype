@@ -45,7 +45,7 @@
             this.lblRecord.Size = new System.Drawing.Size(71, 17);
             this.lblRecord.TabIndex = 39;
             this.lblRecord.Text = "Record ID";
-            this.lblRecord.Click += new System.EventHandler(this.lblRecord_Click);
+
             // 
             // txtRecord
             // 
@@ -54,7 +54,6 @@
             this.txtRecord.Name = "txtRecord";
             this.txtRecord.Size = new System.Drawing.Size(178, 23);
             this.txtRecord.TabIndex = 38;
-            this.txtRecord.TextChanged += new System.EventHandler(this.txtRecord_TextChanged);
             // 
             // lblTitle
             // 
@@ -65,7 +64,6 @@
             this.lblTitle.Size = new System.Drawing.Size(263, 39);
             this.lblTitle.TabIndex = 37;
             this.lblTitle.Text = "Delete a Record";
-            this.lblTitle.Click += new System.EventHandler(this.lblTitle_Click);
             // 
             // btnClear
             // 
