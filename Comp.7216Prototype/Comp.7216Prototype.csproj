@@ -88,6 +88,7 @@
     <Compile Include="Database Files\Data\RecordManagement.cs" />
     <Compile Include="Database Files\Data\TransactionDetails.cs" />
     <Compile Include="Database Files\Data\TransferDetails.cs" />
+    <Compile Include="Database Files\Data\UserTable.cs" />
     <Compile Include="HomeNavigation.cs">
       <SubType>Form</SubType>
     </Compile>

@@ -34,7 +34,6 @@ namespace Comp._7216Prototype.Database_Files
             }
             catch
             {
-
                 return default;
             }
 
