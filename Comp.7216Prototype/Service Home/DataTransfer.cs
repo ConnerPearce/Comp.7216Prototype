@@ -90,15 +90,14 @@ namespace Comp._7216Prototype.Service_Home
                         MessageBox.Show(message, title);
                     }
                     else
-                        MessageBox.Show("Transfer amount cannot be more than current credit");
-
+                        MessageBox.Show("Fields can not be empty");
                 }
                 else
-                    MessageBox.Show("Please enter a valid number");
-
+                    MessageBox.Show("Transfer amount cannot be more than current credit");
             }
             else
-                MessageBox.Show("Fields can not be empty");
+                MessageBox.Show("Please enter a valid number");
+
         }
     }
 }
