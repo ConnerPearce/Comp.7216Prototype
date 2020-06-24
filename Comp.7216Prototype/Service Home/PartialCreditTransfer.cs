@@ -68,10 +68,10 @@ namespace Comp._7216Prototype.Service_Home
                     {
                         await dataService.InsertAsync(new TransferDetails()
                         {
-                            TransferAmount = textBox1.Text,
-                            TransferType = "Partial Credit",
-                            Payed = true,
-                            PayeeID = "5ee40637021fde6dc4b5621d"
+                         TransferAmount = textBox1.Text,
+                         TransferType = "Partial Credit",
+                         Payed = true,
+                         PayeeID = "5ee40637021fde6dc4b5621d"
                         }, "TransferDetails");
                         // subtracts from the total remaining credits of the user
                         user.PartialCredit -= i;

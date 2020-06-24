@@ -68,12 +68,12 @@ namespace Comp._7216Prototype.Service_Home
                     if (user.Minutes >= i)
                     {
                         await dataService.InsertAsync(new TransferDetails()
-                {
-                    TransferAmount = textBox1.Text,
-                    TransferType = "Minutes Transfer",
-                    Payed = true,
-                    PayeeID = "5ee40637021fde6dc4b5621d"
-                }, "TransferDetails");
+                        {
+                         TransferAmount = textBox1.Text,
+                         TransferType = "Minutes Transfer",
+                         Payed = true,
+                         PayeeID = "5ee40637021fde6dc4b5621d"
+                        }, "TransferDetails");
                         // subtracts from the total remaining credits of the user
                         user.Minutes -= i;
                         await dataService.UpdateAsync(user.id, user, "UserTable");
@@ -86,8 +86,8 @@ namespace Comp._7216Prototype.Service_Home
 
 
                         string message = "Minutes has been transfered";
-                string title = "Transfer Minutes";
-                MessageBox.Show(message, title);
+                        string title = "Transfer Minutes";
+                        MessageBox.Show(message, title);
                     }
                     else
                         MessageBox.Show("Transfer amount cannot be more than current credit");
