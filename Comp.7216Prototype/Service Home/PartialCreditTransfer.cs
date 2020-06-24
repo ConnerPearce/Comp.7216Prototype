@@ -67,12 +67,12 @@ namespace Comp._7216Prototype.Service_Home
                     if (user.PartialCredit >= i)
                     {
                         await dataService.InsertAsync(new TransferDetails()
-                {
-                    TransferAmount = textBox1.Text,
-                    TransferType = "Partial Credit",
-                    Payed = true,
-                    PayeeID = "5ee40637021fde6dc4b5621d"
-                }, "TransferDetails");
+                        {
+                            TransferAmount = textBox1.Text,
+                            TransferType = "Partial Credit",
+                            Payed = true,
+                            PayeeID = "5ee40637021fde6dc4b5621d"
+                        }, "TransferDetails");
                         // subtracts from the total remaining credits of the user
                         user.PartialCredit -= i;
                         await dataService.UpdateAsync(user.id, user, "UserTable");

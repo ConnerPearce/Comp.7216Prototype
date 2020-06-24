@@ -38,10 +38,14 @@ namespace Comp._7216Prototype.Limit_Page
                 if (int.TryParse(txtUpdate.Text, out i))
                 {
                     var record = await dataService.GetRecordByIdAsync<LimitRecord>(CollectionName, txtLimitID.Text);
+                    if (record != default)
+                    {
+                        record.Limit = i;
 
-                    record.Limit = i;
-
-                    bool success = await dataService.UpdateAsync(txtLimitID.Text, record, CollectionName);
+                        bool success = await dataService.UpdateAsync(txtLimitID.Text, record, CollectionName);
+                    }
+                    else
+                        MessageBox.Show("Enter a valid ID");
                 }
                 else
                     MessageBox.Show("The Limit has to be a int");

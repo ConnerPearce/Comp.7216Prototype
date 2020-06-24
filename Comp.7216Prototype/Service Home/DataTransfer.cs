@@ -65,16 +65,16 @@ namespace Comp._7216Prototype.Service_Home
                 {
 
                     if (!string.IsNullOrWhiteSpace(textBox1.Text) && comboBox1.SelectedItem != null && !string.IsNullOrWhiteSpace(comboBox1.SelectedItem.ToString()))
-            {
-                DataService dataService = new DataService();
+                    {
+                        DataService dataService = new DataService();
 
-                await dataService.InsertAsync(new TransferDetails()
-                {
-                    TransferAmount = textBox1.Text,
-                    TransferType = "Data Transfer",
-                    Payed = true,
-                    PayeeID = "5ee40637021fde6dc4b5621d"
-                }, "TransferDetails");
+                        await dataService.InsertAsync(new TransferDetails()
+                        {
+                            TransferAmount = textBox1.Text,
+                            TransferType = "Data Transfer",
+                            Payed = true,
+                            PayeeID = "5ee40637021fde6dc4b5621d"
+                        }, "TransferDetails");
                         // subtracts from the total remaining credits of the user
                         user.Data -= i;
                         await dataService.UpdateAsync(user.id, user, "UserTable");
@@ -86,8 +86,8 @@ namespace Comp._7216Prototype.Service_Home
                         await dataService.UpdateAsync(payee.id, payee, "UserTable");
 
                         string message = "Data has been transfered";
-                string title = "Transfer Data";
-                MessageBox.Show(message, title);
+                        string title = "Transfer Data";
+                        MessageBox.Show(message, title);
                     }
                     else
                         MessageBox.Show("Transfer amount cannot be more than current credit");
