@@ -21,6 +21,15 @@ namespace Comp._7216Prototype.Database_Files
 
         // GET METHODS //
 
+        // Gets all records with no id needed (used to check if something already exists (i.e the limit)
+
+        public async Task<IEnumerable<T>> GetAllRecords<T>(string collection)
+        {
+            var mongoCollection = db.GetCollection<T>(collection);
+            return await mongoCollection.Find(new BsonDocument()).ToListAsync();
+
+        }
+
         // Gets a record by id
         public async Task<T> GetRecordByIdAsync<T>(string collection, string id)
         {

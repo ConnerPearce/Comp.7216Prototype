@@ -38,15 +38,25 @@ namespace Comp._7216Prototype.CreateLimit
                 int temp;
                 if (int.TryParse(txtLimit.Text,out temp))
                 {
-                    // When you insert you need to create a new model of what you need and insert all the items on creation
-                    // i.e for me since its to do with Limits the model i use is LimitRecord
-                    await dataService.InsertAsync(new LimitRecord() 
-                    {                      
-                        Limit = temp, 
-                        DateCreated = DateTime.Now // Datetime.Now gets the current date, everytime you need DateCreated this is what you will need to use
-                    }, CollectionName); // Collection name is needed every time so that the DataService knows what table to insert data into
+                    // Checks if the limit exists
+                    var limitRecords = await dataService.GetAllRecords<LimitRecord>(CollectionName);
 
-                    MessageBox.Show("Added"); // Just to show users the action has completed
+                    if (limitRecords.Count() > 0)
+                    {
+                        MessageBox.Show("Unable to be added as there is already a limit, Please delete or update the current limit");
+                    }
+                    else
+                    {
+                        // When you insert you need to create a new model of what you need and insert all the items on creation
+                        // i.e for me since its to do with Limits the model i use is LimitRecord
+                        await dataService.InsertAsync(new LimitRecord()
+                        {
+                            Limit = temp,
+                            DateCreated = DateTime.Now // Datetime.Now gets the current date, everytime you need DateCreated this is what you will need to use
+                        }, CollectionName); // Collection name is needed every time so that the DataService knows what table to insert data into
+
+                        MessageBox.Show("Added"); // Just to show users the action has completed
+                    }                 
                 }
                 else// If the text box is not an int it will give an error (ERRORS ARE NEEDED)
                     MessageBox.Show("Please enter a valid int");
